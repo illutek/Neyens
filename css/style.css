@@ -1,0 +1,192 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(http://fonts.googleapis.com/css?family=Boogaloo);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'fontdinerdotcom_loungyregular';
+  src: url("../fonts/font-diner/fontl-webfont.eot");
+  src: url("../fonts/font-diner/fontl-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/font-diner/fontl-webfont.woff2") format("woff2"), url("../fonts/font-diner/fontl-webfont.woff") format("woff"), url("../fonts/font-diner/fontl-webfont.ttf") format("truetype"), url("../fonts/font-diner/fontl-webfont.svg#fontdinerdotcom_loungyregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'hurtmold_regular';
+  src: url("../fonts/hurtmold/hurtm-webfont.eot");
+  src: url("../fonts/hurtmold/hurtm-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hurtmold/hurtm-webfont.woff2") format("woff2"), url("../fonts/hurtmold/hurtm-webfont.woff") format("woff"), url("../fonts/hurtmold/hurtm-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 26px; }
+
+p {
+  margin-bottom: 15px; }
+
+h1, h2, h3, h2, h3, h4 {
+  padding-bottom: 12px; }
+
+h1, h2, h3 {
+  padding: 12px 0 20px;
+  font-size: 30px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 22px; }
+
+/*
+* video background
+*/
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100; }
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+@media (min-aspect-ratio: 16 / 9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%; } }
+@media (max-aspect-ratio: 16 / 9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%; } }
+/*
+* Navigation
+*/
+.navbar-fixed-top {
+  background: #61a534; }
+
+.navbar-default {
+  border-bottom: solid 1px #f1db00; }
+  .navbar-default .navbar-nav li a {
+    color: #f1db00; }
+
+/*
+* Header region
+*/
+header {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column; }
+  header .site-name {
+    font-size: 32px;
+    margin-top: 80px;
+    color: white;
+    padding: 10px;
+    background: #f1db00; }
+  header nav {
+    margin-top: 25px; }
+    header nav ul {
+      display: flex; }
+      header nav ul li a {
+        padding: 10px;
+        background: #f1db00; }
+
+/*
+*
+*/
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; }
+  .center .main-wrap {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.3);
+    min-height: 350px; }
+  .center .green-canvas, .center .yellow-canvas {
+    background: #61a534;
+    max-width: 60%;
+    flex: 0 0 100%;
+    color: white;
+    min-height: 300px;
+    padding: 2%;
+    margin: 2% auto;
+    display: flex; }
+    .center .green-canvas img, .center .yellow-canvas img {
+      width: 95%;
+      height: auto; }
+    .center .green-canvas .image-wrap, .center .yellow-canvas .image-wrap {
+      display: flex;
+      align-items: center; }
+    .center .green-canvas .content, .center .yellow-canvas .content {
+      border: 1px solid white;
+      padding: 2%;
+      display: flex;
+      align-items: center; }
+  .center .yellow-canvas {
+    background: #f1db00; }
+    .center .yellow-canvas .mention, .center .yellow-canvas .form {
+      background: #61a534;
+      padding: 25px; }
+      .center .yellow-canvas .mention p, .center .yellow-canvas .form p {
+        font-size: 22px;
+        font-weight: bold; }
+      .center .yellow-canvas .mention .arrow, .center .yellow-canvas .form .arrow {
+        font-size: 62px; }
+    .center .yellow-canvas .form label {
+      min-width: 100px;
+      line-height: 50px; }
+    .center .yellow-canvas .form input[type="submit"] {
+      background: #f1db00;
+      border: none;
+      padding: 5px 15px;
+      margin-left: 330px; }
+
+footer .footer-wrap {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  min-height: 200px; }
+
+@media screen and (max-width: 500px) {
+  .image-wrap {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */
