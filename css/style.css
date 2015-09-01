@@ -52,7 +52,8 @@ table {
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  line-height: 26px; }
+  line-height: 26px;
+  background: #bfc773; }
 
 p {
   margin-bottom: 15px; }
@@ -112,15 +113,17 @@ h3 {
 * Header region
 */
 header {
-  min-height: 200px;
+  min-height: 300px;
+  background: url("../images/palm-leaves-250.png") no-repeat right 50px;
   display: flex;
   flex-direction: column; }
   header .site-name {
     font-size: 32px;
     margin-top: 80px;
     color: white;
-    padding: 10px;
-    background: #f1db00; }
+    padding: 18px;
+    background: #f1db00;
+    z-index: -100; }
   header nav {
     margin-top: 25px; }
     header nav ul {
@@ -132,57 +135,59 @@ header {
 /*
 *
 */
-.center {
+.center, footer .footer-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px; }
-  .center .main-wrap {
+  .center .main-wrap, footer .footer-wrap .main-wrap, .center .main-wrap-top, footer .footer-wrap .main-wrap-top {
     width: 100vw;
     background: rgba(0, 0, 0, 0.3);
-    min-height: 350px; }
-  .center .green-canvas, .center .yellow-canvas {
-    background: #61a534;
-    max-width: 60%;
-    flex: 0 0 100%;
-    color: white;
-    min-height: 300px;
-    padding: 2%;
-    margin: 2% auto;
-    display: flex; }
-    .center .green-canvas img, .center .yellow-canvas img {
-      width: 95%;
-      height: auto; }
-    .center .green-canvas .image-wrap, .center .yellow-canvas .image-wrap {
-      display: flex;
-      align-items: center; }
-    .center .green-canvas .content, .center .yellow-canvas .content {
-      border: 1px solid white;
-      padding: 2%;
-      display: flex;
-      align-items: center; }
-  .center .yellow-canvas {
-    background: #f1db00; }
-    .center .yellow-canvas .mention, .center .yellow-canvas .form {
-      background: #61a534;
-      padding: 25px; }
-      .center .yellow-canvas .mention p, .center .yellow-canvas .form p {
-        font-size: 22px;
-        font-weight: bold; }
-      .center .yellow-canvas .mention .arrow, .center .yellow-canvas .form .arrow {
-        font-size: 62px; }
-    .center .yellow-canvas .form label {
-      min-width: 100px;
-      line-height: 50px; }
-    .center .yellow-canvas .form input[type="submit"] {
-      background: #f1db00;
-      border: none;
-      padding: 5px 15px;
-      margin-left: 330px; }
+    min-height: 350px;
+    margin-top: 100px; }
+  .center .main-wrap-top, footer .footer-wrap .main-wrap-top {
+    margin-top: -100px; }
 
-footer .footer-wrap {
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.3);
+.green-canvas, .yellow-canvas {
+  background: #61a534;
+  max-width: 60%;
+  flex: 0 0 100%;
+  color: white;
+  min-height: 300px;
+  padding: 2%;
+  margin: 2% auto;
+  display: flex; }
+  .green-canvas img, .yellow-canvas img {
+    width: 95%;
+    height: auto; }
+  .green-canvas .image-wrap, .yellow-canvas .image-wrap {
+    display: flex;
+    align-items: center; }
+  .green-canvas .content, .yellow-canvas .content {
+    padding: 2%;
+    display: flex;
+    align-items: center; }
+
+.yellow-canvas {
+  background: #f1db00; }
+  .yellow-canvas .mention, .yellow-canvas .form {
+    background: #61a534;
+    padding: 25px; }
+    .yellow-canvas .mention p, .yellow-canvas .form p {
+      font-size: 22px;
+      font-weight: bold; }
+    .yellow-canvas .mention .arrow, .yellow-canvas .form .arrow {
+      font-size: 62px; }
+  .yellow-canvas .form label {
+    min-width: 100px;
+    line-height: 50px; }
+  .yellow-canvas .form input[type="submit"] {
+    background: #f1db00;
+    border: none;
+    padding: 5px 15px;
+    margin-left: 330px; }
+
+footer .footer-wrap .footer-canvas {
   min-height: 200px; }
 
 @media screen and (max-width: 500px) {

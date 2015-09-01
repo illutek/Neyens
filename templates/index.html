@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php print $head; ?>
-    <title>Flex</title>
+    <title>Neyens - Tuinen</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.js"></script>
+
     <script src="../js/jquery.smooth-scroll.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -19,9 +20,10 @@
 </head>
 <body>
 <div class="fullscreen-bg">
-    <video loop muted autoplay poster="../video/jasmine_flower_127/snapshot.jpg" class="fullscreen-bg__video">
+    <video loop muted autoplay poster="../video/jasmine_flower_127/snapshot-min.PNG" class="fullscreen-bg__video">
         <source src="../video/jasmine_flower_127/Jasmine_flower.mp4" type="video/mp4">
         <source src="../video/jasmine_flower_127/Jasmine_flower.ogv" type="video/ogv">
+        <source src="../video/jasmine_flower_127/Jasmine_flower.ogg" type="video/ogg">
         <source src="../video/jasmine_flower_127/Jasmine_flower.webmsd.webm" type="video/webm">
     </video>
 </div>
@@ -39,16 +41,17 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#prive-tuinen">Prive tuinen en parken</a></li>
                 <li><a href="#bedrijven">Bedrijven</a></li>
                 <li><a href="#steden">Steden en gemeente</a></li>
-                <li><a href="#prive-tuinen">Prive tuinen en parken</a></li>
+                <li><a href="#realisaties">Realisaties</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
-
+<div id="home"></div>
 <header class="container">
     <div class="site-name">
         NEYENS - Tuinaanleg - Tuinonderhoud
@@ -56,7 +59,7 @@
 </header>
 
 <section class="center">
-    <div class="main-wrap">
+    <div class="main-wrap-top">
         <div class="row green-canvas">
             <div class="col-md-4 image-wrap"><img src="../images/tuin.jpg"></div>
             <div class="col-md-8 content">
@@ -73,6 +76,32 @@
                         tevens rioleringswerken.</p>
 
                         <p>Verhuur van citycontainer voor 6m³ en 9 m³.</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="center" id="prive-tuinen">
+    <div class="main-wrap">
+        <div class="row green-canvas">
+            <div class="col-md-4 image-wrap"><img src="../images/prive.jpg"></div>
+            <div class="col-md-8 content">
+                <span>
+                <h2>Privé tuinen en parken</h2>
+                <p>Aanleg en Renovaties van bestaande tuinen.
+                    Tuinaanleg van nieuwbouw woningen, het leveren en plaatsen van alle soorten
+                    verhardingen, leveren en plaatsen van tuinverlichtingen, alle soorten
+                    afsluitingen gaande van draad, hout, betonproducten enz.
+                    Planten van sierplanten, bomen en vaste planten zaiien van alle type's
+                    grasperken inclusief kunstgrassen.
+                    Alle grondwerken zoals leveren en verspreiden van zwarte grond nivelleren
+                    van terreinen met laadgraafcombinatie of bobcat voor kleinere ruimtes.
+                    Plaatsen van alle leidingen zoals water, stroom, afvoer, telefoon,
+                    met minigraver alle kleine grondwerken.</p>
+                    <p>Alle tuinwerken kunnen we apart uitvoeren voor de doe-het-zelvers en
+                        voor ieders budget.</p>
+                    <p>Tevens het plaatsen van containers voor groenafval en tuinresten.</p>
                 </span>
             </div>
         </div>
@@ -129,31 +158,21 @@
         </div>
     </div>
 </sections>
-<section class="center" id="prive-tuinen">
+
+
+<section class="center" id="realisaties">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <div class="col-md-4 image-wrap"><img src="../images/prive.jpg"></div>
-            <div class="col-md-8 content">
+            <div class="col-md-12 content">
                 <span>
-                <h2>Privé tuinen en parken</h2>
-                <p>Aanleg en Renovaties van bestaande tuinen.
-                    Tuinaanleg van nieuwbouw woningen, het leveren en plaatsen van alle soorten
-                    verhardingen, leveren en plaatsen van tuinverlichtingen, alle soorten
-                    afsluitingen gaande van draad, hout, betonproducten enz.
-                    Planten van sierplanten, bomen en vaste planten zaiien van alle type's
-                    grasperken inclusief kunstgrassen.
-                    Alle grondwerken zoals leveren en verspreiden van zwarte grond nivelleren
-                    van terreinen met laadgraafcombinatie of bobcat voor kleinere ruimtes.
-                    Plaatsen van alle leidingen zoals water, stroom, afvoer, telefoon,
-                    met minigraver alle kleine grondwerken.</p>
-                    <p>Alle tuinwerken kunnen we apart uitvoeren voor de doe-het-zelvers en
-                        voor ieders budget.</p>
-                    <p>Tevens het plaatsen van containers voor groenafval en tuinresten.</p>
+                <h2>Realisatie</h2>
+                <p></p>
                 </span>
             </div>
         </div>
     </div>
 </section>
+
 <section class="center" id="contact">
     <div class="main-wrap">
         <div class="row yellow-canvas">
@@ -173,7 +192,22 @@
     </div>
 </section>
 <footer>
-    <div class="footer-wrap">footer</div>
+    <div class="footer-wrap">
+        <div class="green-canvas footer-canvas">
+            <div class="col-md-6">
+                <p>Telefoon: 003211/63.35.28<br>
+                    GSM: 0495/30.35.28<br>
+                    E-mail: info@neyens.be<br>
+                    BE 0705.544.643<br></p>
+
+                <p>Postadres :<br>
+                Weyerstraat 325<br>
+                3850 Kozen België</p>
+            </div>
+            <div class="col-md-6"><img src="../images/logo_small.jpg">
+            Neyens | &copy; 2015</div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
