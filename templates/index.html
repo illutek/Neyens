@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.js"></script>
-
     <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/sticky.js"></script>
+    <script src="../js/functions.js"></script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -41,30 +43,44 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#prive-tuinen">Prive tuinen en parken</a></li>
-                <li><a href="#bedrijven">Bedrijven</a></li>
-                <li><a href="#steden">Steden en gemeente</a></li>
-                <li><a href="#realisaties">Realisaties</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home <i class="fa fa-home"></i></a></li>
+                <li><a href="#prive-tuinen">Prive tuinen en parken <i class="fa fa-map-pin"></i></a></li>
+                <li><a href="#bedrijven">Bedrijven <i class="fa fa-industry"></i></a></li>
+                <li><a href="#steden">Steden en gemeente <i class="fa fa-university"></i></a></li>
+                <li><a href="#realisaties">Realisaties <i class="fa fa-picture-o"></i></a></li>
+                <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
+            </ul>
+
         </div>
     </div>
 </nav>
 <div id="home"></div>
 <header class="container">
-    <div class="site-name">
-        NEYENS - Tuinaanleg - Tuinonderhoud
+    <div class="row">
+
+        <div class="experience">
+            <a href="#home">
+                <figure><img src="../images/twentyfive_year_active-stroke-200-min.png"></figure>
+            </a>
+        </div>
+        <div id="sticky-anchor"></div><!-- als deze de top vd page bereikt wordt .experience sticky -->
+        <div class="site-name">
+            NEYENS - Tuinaanleg - Tuinonderhoud
+        </div>
     </div>
+
 </header>
 
 <section class="center">
     <div class="main-wrap-top">
         <div class="row green-canvas">
-            <div class="col-md-4 image-wrap"><img src="../images/tuin.jpg"></div>
-            <div class="col-md-8 content">
+            <figure class="col-md-4 image-wrap"><img src="../images/tuin.jpg"></figure>
+            <article class="col-md-8 content">
                 <span>
-                <h1>Neyens Tuinaanleg en Groenonderhoud</h1>
+                    <h1>Neyens Tuinaanleg en Groenonderhoud</h1>
                 <p>Wij zijn gespecialiseerd in het aanleggen en onderhouden van privé tuinen
                     en parken aanleggen van verhardingen, waterpartijen, automatische beregeningen,
                     tuinverlichtingen, beplantingen en gazons.</p>
@@ -77,7 +93,8 @@
 
                         <p>Verhuur van citycontainer voor 6m³ en 9 m³.</p>
                 </span>
-            </div>
+            </article>
+
         </div>
     </div>
 </section>
@@ -85,10 +102,10 @@
 <section class="center" id="prive-tuinen">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <div class="col-md-4 image-wrap"><img src="../images/prive.jpg"></div>
-            <div class="col-md-8 content">
+            <figure class="col-md-4 image-wrap"><img src="../images/prive.jpg"></figure>
+            <article class="col-md-8 content">
                 <span>
-                <h2>Privé tuinen en parken</h2>
+                    <h2>Privé tuinen en parken</h2>
                 <p>Aanleg en Renovaties van bestaande tuinen.
                     Tuinaanleg van nieuwbouw woningen, het leveren en plaatsen van alle soorten
                     verhardingen, leveren en plaatsen van tuinverlichtingen, alle soorten
@@ -103,7 +120,7 @@
                         voor ieders budget.</p>
                     <p>Tevens het plaatsen van containers voor groenafval en tuinresten.</p>
                 </span>
-            </div>
+            </article>
         </div>
     </div>
 </section>
@@ -111,7 +128,7 @@
 <section class="center" id="bedrijven">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <div class="col-md-4 image-wrap"><img src="../images/bedrijven.jpg"></div>
+            <figure class="col-md-4 image-wrap"><img src="../images/bedrijven.jpg"></figure>
             <div class="col-md-8 content">
                 <span>
                 <h2>Bedrijven en Industrieparken</h2>
@@ -136,7 +153,7 @@
 <sections class="center" id="steden">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <div class="col-md-4 image-wrap"><img src="../images/steden.jpg"></div>
+            <figure class="col-md-4 image-wrap"><img src="../images/steden.jpg"></figure>
             <div class="col-md-8 content">
                 <span>
                 <h2>Steden en Gemeenten</h2>
@@ -163,12 +180,10 @@
 <section class="center" id="realisaties">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <div class="col-md-12 content">
-                <span>
+            <article class="col-md-12 content">
                 <h2>Realisatie</h2>
-                <p></p>
-                </span>
-            </div>
+                <div class="img_realisaties"></div>
+            </article>
         </div>
     </div>
 </section>
@@ -191,21 +206,36 @@
         </div>
     </div>
 </section>
+
+<section class="center" id="acties">
+    <div class="main-wrap-acties">
+        <div class="row yellow-canvas">
+            <span>
+                <h2>Aktie : Korting van 10% op uw huidig onderhoudscontract - Offertte</h2>
+            <p>Aktie van 10 % korting op uw huidig groenonderhoudscontract.</p>
+            <p>Hebt u een lagere offerte dan de onze, dan verlagen wij onze prijs - Zodat wij deze steeds aan de beste voorwaarden kunnen voldoen!
+                Nieuw : Plaatsen van Citycontainers voor groenafval max 10m³ aan voordelige prijzen.
+                Plaatsen van Citycontainers voor alle soorten afval, vanaf 6 m³ VRAAG NAAR DE PLAATSINGSVOORWAARDEN</p>
+            </span>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="footer-wrap">
-        <div class="green-canvas footer-canvas">
-            <div class="col-md-6">
+        <div class="row green-canvas footer-canvas">
+            <address class="col-md-6">
                 <p>Telefoon: 003211/63.35.28<br>
                     GSM: 0495/30.35.28<br>
                     E-mail: info@neyens.be<br>
                     BE 0705.544.643<br></p>
 
                 <p>Postadres :<br>
-                Weyerstraat 325<br>
-                3850 Kozen België</p>
-            </div>
+                    Weyerstraat 325<br>
+                    3850 Kozen België</p>
+            </address>
             <div class="col-md-6"><img src="../images/logo_small.jpg">
-            Neyens | &copy; 2015</div>
+                Neyens | &copy; 2015
+            </div>
         </div>
     </div>
 </footer>
