@@ -4,7 +4,7 @@ Video handleiding in de Drupal map
 http://www.zamzar.com/ voor het converteren naar verschillende formaten
 
 HTML5
-***html
+```html
 <section class="center" id="prive-tuinen">
     <div class="main-wrap">
         <div class="row green-canvas">
@@ -13,12 +13,12 @@ HTML5
             <h1></h1>
             <p></p>
             </article>........
-***
+```
 Dit HTML verhaal klopt wel, maar eens omgezet naar een Drupal7 theme kan op het tpl.php niveau
 geen tag article opnieuw gebruikt worden of toch?
 
 Deze manier
-***html
+```html
 <!-- op 'page.tpl.php' level -->
 <article class="col-md-8 content">
 <!-- hierna de node.tpl.php code -->
@@ -30,8 +30,8 @@ Deze manier
     </div>
     <!-- end node.tpl.php -->
 </article>
-***
-***html
+```
+```html
 Of volgende
 <!-- op 'page.tpl.php' level -->
 <div class="col-md-8 content">
@@ -44,13 +44,13 @@ Of volgende
     </article>
     <!-- end node.tpl.php -->
 </div>
-***
+```
 De artikel tekst en de h2 moeten samen gebundelt worden in een span tag bij IE zou dit
 anders een probleem geven
 
 
 Font awesome
-***html
+```html
 bedrijven <i class="fa fa-industry"></i>
 gemeente <i class="fa fa-tree"></i> of <i class="fa fa-university"></i>
 realisaties <i class="fa fa-picture-o"></i>
@@ -58,6 +58,6 @@ home <i class="fa fa-home"></i>
 acties <i class="fa fa-asterisk"></i> of <i class="fa fa-info"></i>
 prive <i class="fa fa-map-pin"></i> of <i class="fa fa-leaf"></i>
 contact <i class="fa fa-envelope"></i>
-***
+```
 Experience cirkel Sticky after scroll (sticky.js) + aantal transform effecten
 
