@@ -33,8 +33,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -50,9 +49,9 @@
                 <li><a href="#realisaties">Realisaties <i class="fa fa-picture-o"></i></a></li>
                 <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <!-- <ul class="nav navbar-nav navbar-right">
                 <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
-            </ul>
+            </ul> -->
 
         </div>
     </div>
@@ -60,18 +59,20 @@
 <div id="home"></div>
 <header class="container">
     <div class="row">
-
         <div class="experience">
             <a href="#home">
                 <figure><img src="../images/twentyfive_year_active-stroke-200-min.png"></figure>
             </a>
         </div>
-        <div id="sticky-anchor"></div><!-- als deze de top vd page bereikt wordt .experience sticky -->
+        <div id="sticky-anchor"></div>
+        <!-- als deze de top vd page bereikt wordt .experience sticky -->
         <div class="site-name">
             NEYENS - Tuinaanleg - Tuinonderhoud
         </div>
     </div>
-
+    <div class="actie-wrap">
+        <a href="#acties"><div class="acties"></div></a>
+    </div>
 </header>
 
 <section class="center">
@@ -150,7 +151,7 @@
     </div>
 </section>
 
-<sections class="center" id="steden">
+<section class="center" id="steden">
     <div class="main-wrap">
         <div class="row green-canvas">
             <figure class="col-md-4 image-wrap"><img src="../images/steden.jpg"></figure>
@@ -174,14 +175,15 @@
             </div>
         </div>
     </div>
-</sections>
+</section>
 
 
 <section class="center" id="realisaties">
     <div class="main-wrap">
-        <div class="row green-canvas">
+        <div class="green-canvas">
             <article class="col-md-12 content">
                 <h2>Realisatie</h2>
+
                 <div class="img_realisaties"></div>
             </article>
         </div>
@@ -193,7 +195,13 @@
         <div class="row yellow-canvas">
             <div class="col-md-5 mention">
                 <p>Contacteer ons via dit formulier voor al je vragen of voor een offerte</p>
-                <i class="fa fa-arrow-right arrow"></i>
+                <div class="arrow-right">
+                    <i class="fa fa-arrow-right arrow"></i>
+                </div>
+                <div class="arrow-down">
+                    <i class="fa fa-arrow-down arrow"></i>
+                </div>
+
             </div>
             <div class="col-md-6 col-md-offset-1 form">
                 <form>
@@ -213,7 +221,8 @@
             <span>
                 <h2>Aktie : Korting van 10% op uw huidig onderhoudscontract - Offertte</h2>
             <p>Aktie van 10 % korting op uw huidig groenonderhoudscontract.</p>
-            <p>Hebt u een lagere offerte dan de onze, dan verlagen wij onze prijs - Zodat wij deze steeds aan de beste voorwaarden kunnen voldoen!
+            <p>Hebt u een lagere offerte dan de onze, dan verlagen wij onze prijs - Zodat wij deze steeds aan de beste
+                voorwaarden kunnen voldoen!
                 Nieuw : Plaatsen van Citycontainers voor groenafval max 10m³ aan voordelige prijzen.
                 Plaatsen van Citycontainers voor alle soorten afval, vanaf 6 m³ VRAAG NAAR DE PLAATSINGSVOORWAARDEN</p>
             </span>
@@ -223,17 +232,39 @@
 <footer>
     <div class="footer-wrap">
         <div class="row green-canvas footer-canvas">
-            <address class="col-md-6">
-                <p>Telefoon: 003211/63.35.28<br>
-                    GSM: 0495/30.35.28<br>
-                    E-mail: info@neyens.be<br>
-                    BE 0705.544.643<br></p>
+            <div class="col-sm-6 address">
+                <div class="phone-screen margin-bottom">
+                    <i class="fa fa-phone"></i> 003211/63.35.28
+                </div>
+                <div class="phone-mobile margin-bottom">
+                    <a href="tel:+3211633528" class="btn btn-info">
+                        <i class="fa fa-phone"></i> 003211/63.35.28
+                    </a>
+                </div>
+                <div class="phone-screen margin-bottom">
+                    <i class="fa fa-mobile"></i> 0495/30.35.28
+                </div>
+                <div class="phone-mobile margin-bottom">
+                    <a href="tel:+32495303528" class="btn btn-info">
+                        <i class="fa fa-mobile"></i> 0495/30.35.28
+                    </a>
+                </div>
+                <div class="mail margin-bottom">
+                    <i class="fa fa-envelope"></i> info@neyens.be<br>
+                </div>
+                <div class="btw margin-bottom">
+                    BE 0705.544.643
+                </div>
+                <div>
+                    <p>Postadres :<br>
+                        Weyerstraat 325<br>
+                        3850 Kozen België
+                    </p>
+                </div>
 
-                <p>Postadres :<br>
-                    Weyerstraat 325<br>
-                    3850 Kozen België</p>
-            </address>
-            <div class="col-md-6"><img src="../images/logo_small.jpg">
+            </div>
+            <div class="col-sm-6">
+                <img src="../images/logo_small.jpg">
                 Neyens | &copy; 2015
             </div>
         </div>

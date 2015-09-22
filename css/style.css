@@ -49,11 +49,26 @@ table {
   src: url("../fonts/hurtmold/hurtm-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hurtmold/hurtm-webfont.woff2") format("woff2"), url("../fonts/hurtmold/hurtm-webfont.woff") format("woff"), url("../fonts/hurtmold/hurtm-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+.rounded {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.roundedTop {
+  -moz-border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px; }
+
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
   line-height: 26px;
-  background: #bfc773; }
+  background: #bfc773;
+  height: 100%;
+  width: 100%; }
 
 p {
   margin-bottom: 15px; }
@@ -70,6 +85,9 @@ h2 {
 
 h3 {
   font-size: 22px; }
+
+.margin-bottom {
+  margin-bottom: 10px; }
 
 /*
 * video background
@@ -123,8 +141,6 @@ header {
   header .experience {
     position: absolute;
     margin-top: 20px;
-    height: 250px;
-    width: 250px;
     float: left;
     z-index: 200;
     -moz-transform: scale(1);
@@ -152,79 +168,147 @@ header {
     margin-left: 10%;
     background: #f1db00;
     z-index: -100; }
+  header .acties {
+    position: absolute;
+    margin-left: 90%;
+    top: 80px;
+    height: 87px;
+    width: 87px;
+    background: url("../images/Infobox_info_icon.svg-min.png") no-repeat center; }
+  header .acties:hover {
+    background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center; }
 
 .center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 20px; }
-  .center .main-wrap {
-    width: 100vw;
+  .center .main-wrap, .center .main-wrap-top {
     background: rgba(0, 0, 0, 0.3);
+    padding: 25px 0;
     min-height: 350px;
     margin-top: 100px; }
-    .center .main-wrap figure {
-      position: relative;
-      opacity: 0;
-      transform: translateX(90px);
-      transition: all 0.4s ease-in-out; }
-      .center .main-wrap figure.is-showing {
-        opacity: 1;
-        transform: translateX(0px); }
-      .center .main-wrap figure img {
-        display: block;
-        transform: scale(1);
-        transition: all 0.3s ease-in-out; }
   .center .main-wrap-top {
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.3);
-    min-height: 350px;
     margin-top: -100px; }
+  .center .main-wrap-acties .yellow-canvas {
+    color: #61a534; }
 
-.green-canvas, .yellow-canvas {
+.green-canvas {
   background: #61a534;
   max-width: 60%;
-  flex: 0 0 100%;
+  color: white;
+  min-height: 300px;
+  padding: 2%;
+  margin: 2% auto; }
+  .green-canvas img {
+    width: 95%;
+    height: auto; }
+  .green-canvas .image-wrap {
+    padding-top: 3%; }
+  .green-canvas .content {
+    padding: 2%; }
+
+.yellow-canvas {
+  max-width: 60%;
   color: white;
   min-height: 300px;
   padding: 2%;
   margin: 2% auto;
-  display: flex; }
-  .green-canvas img, .yellow-canvas img {
-    width: 95%;
-    height: auto; }
-  .green-canvas .image-wrap, .yellow-canvas .image-wrap {
-    display: flex;
-    align-items: center; }
-  .green-canvas .content, .yellow-canvas .content {
-    padding: 2%;
-    display: flex;
-    align-items: center; }
-
-.yellow-canvas {
   background: #f1db00; }
-  .yellow-canvas .mention, .yellow-canvas .form {
+  .yellow-canvas .mention {
     background: #61a534;
     padding: 25px; }
-    .yellow-canvas .mention p, .yellow-canvas .form p {
+    .yellow-canvas .mention p {
       font-size: 22px;
       font-weight: bold; }
-    .yellow-canvas .mention .arrow, .yellow-canvas .form .arrow {
+    .yellow-canvas .mention .arrow-down {
+      display: none; }
+    .yellow-canvas .mention .arrow {
       font-size: 62px; }
-  .yellow-canvas .form label {
-    min-width: 100px;
-    line-height: 50px; }
-  .yellow-canvas .form input[type="submit"] {
+  .yellow-canvas .form {
+    background: #61a534;
+    padding: 25px; }
+    .yellow-canvas .form label {
+      min-width: 100px;
+      line-height: 50px; }
+    .yellow-canvas .form input[type="submit"] {
+      background: #f1db00;
+      border: none;
+      padding: 5px 15px;
+      margin-left: 330px; }
+
+footer .footer-wrap .footer-canvas .address {
+  font-size: 20px; }
+footer .phone-mobile {
+  display: none;
+  margin: 15px 0; }
+  footer .phone-mobile .btn {
+    width: 100%; }
+  footer .phone-mobile .btn-info {
     background: #f1db00;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
     border: none;
-    padding: 5px 15px;
-    margin-left: 330px; }
+    color: #61a534;
+    padding: 10px; }
+    footer .phone-mobile .btn-info:hover {
+      color: #ffffff;
+      background: #f1db00; }
 
-footer .footer-wrap .footer-canvas {
-  min-height: 200px; }
+/*
+*media query's
+*/
+@media only screen and (max-width: 1366px) {
+  /* css code voor tablets in landscape mode
+  De 1366px op aanraden van Koen (was 1024)*/ }
+@media only screen and (max-width: 960px) {
+  /* css code voor tablets in portrait mode */ }
+@media only screen and (max-width: 767px) {
+  /* css code voor smartphones in landscape mode */ }
+@media only screen and (max-width: 479px) {
+  /* css code voor smartphones in portrait mode */
+  header {
+    background: none; }
+    header .experience {
+      -moz-transform: scale(0.6);
+      -o-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      margin-left: -30px; }
+    header .experience.stick {
+      position: fixed;
+      -moz-transform: scale(0);
+      -o-transform: scale(0);
+      -ms-transform: scale(0);
+      -webkit-transform: scale(0);
+      transform: scale(0); }
+    header .site-name {
+      font-size: 20px;
+      margin-top: 80px;
+      padding: 18px 0 18px 100px;
+      margin-left: 10%; }
+    header .actie-wrap {
+      display: none; }
 
-@media screen and (max-width: 500px) {
+  .mention .arrow-right {
+    display: none; }
+
+  .green-canvas {
+    max-width: 90%; }
+
+  .yellow-canvas {
+    max-width: 90%; }
+    .yellow-canvas .form input[type="submit"] {
+      margin-left: 0px; }
+
   .image-wrap {
+    display: none; }
+
+  .center .main-wrap, .center .main-wrap-top {
+    margin-top: 25px; }
+
+  footer .phone-mobile {
+    display: block; }
+  footer .phone-screen {
     display: none; } }
 
 /*# sourceMappingURL=style.css.map */

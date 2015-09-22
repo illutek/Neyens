@@ -1,17 +1,21 @@
 @import "reset";
 @import "basicfonts";
 @import "transform";
+@import "roundcorners";
 @import "opacity";
 
 $yellow: #f1db00;
 $green: #61a534;
 $grey: #eaeadf;
+$margin-b: 10px;
 
 body {
   margin: 0;
   font-family: $font-raleway;
   line-height: 26px;
   background: #bfc773;
+  height: 100%;
+  width: 100%;
 }
 
 p {
@@ -37,214 +41,306 @@ h3 {
   font-size: $fontsize-basic +10;
 }
 
-/*
-* video background
-*/
-
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
+.margin-bottom {
+  margin-bottom: $margin-b;
 }
 
-.fullscreen-bg__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  /*
+  * video background
+  */
 
-//dit om de video te centeren
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    height: 300%;
-    top: -100%;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: 300%;
-    left: -100%;
-  }
-}
-
-/*
-* Navigation
-*/
-
-.navbar-fixed-top {
-  background: $green;
-}
-
-.navbar-default {
-  border-bottom: solid 1px $yellow;
-  .navbar-nav {
-    li {
-      a {
-        color: $yellow;
-      }
-    }
-  }
-  .navbar-right {
-    @extend .navbar-nav;
-    border: solid 1px $yellow;
-  }
-}
-
-/*
-* Header region
-*/
-header {
-  min-height: 300px;
-  background: url("../images/palm-leaves-250-min.png") no-repeat right 50px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  .experience {
-    position: absolute;
-    margin-top: 20px;
-    height: 250px;
-    width: 250px;
-    float: left;
-    z-index: 200;
-    @include scale(1);
-    transition: all 0.4s ease-in-out;
-  }
-  .experience.stick {
+  .fullscreen-bg {
     position: fixed;
-    @include scale(0.7);
-    transition: all 0.4s ease-in-out;
-    top: 10px;
-  }
-  .site-name {
-    position: absolute;
-    width: 90%;
-    font-size: $fontsize-basic +20;
-    margin-top: 80px;
-    color: white;
-    padding: 18px 0 18px 100px;
-    margin-left: 10%;
-    background: $yellow;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
     z-index: -100;
   }
-}
 
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  //maakt de class center even hoog dan de display
-  //height: 100vh;
-  margin-bottom: 20px;
-  //floating figure
-  .main-wrap {
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.3);
-    min-height: 350px;
-    margin-top: 100px;
-    figure {
-      position: relative;
-      opacity: 0;
-      transform: translateX(90px);
-      transition: all 0.4s ease-in-out;
-      &.is-showing {
-        opacity: 1;
-        transform: translateX(0px);
-      }
-      img {
-        display: block;
-        transform: scale(1);
-        transition: all 0.3s ease-in-out;
-      }
+  //dit om de video te centeren
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
     }
   }
-  .main-wrap-top {
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.3);
-    min-height: 350px;
-    margin-top: -100px;
+
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
   }
 
-}
+  /*
+  * Navigation
+  */
 
-.green-canvas {
-  background: $green;
-  max-width: 60%;
-  flex: 0 0 100%;
-  color: white;
-  min-height: 300px;
-  padding: 2%;
-  margin: 2% auto;
-  display: flex;
-  img {
-    width: 95%;
-    height: auto;
-  }
-  .image-wrap {
-    display: flex;
-    align-items: center;
-  }
-  .content {
-    //border: 1px solid white;
-    padding: 2%;
-    //height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-
-//contactform region
-.yellow-canvas {
-  @extend .green-canvas;
-  background: $yellow;
-  .mention {
-    //aankondiging contactform
+  .navbar-fixed-top {
     background: $green;
-    padding: 25px;
-    p {
-      font-size: $fontsize-basic +10;
-      font-weight: bold;
+  }
+
+  .navbar-default {
+    border-bottom: solid 1px $yellow;
+    .navbar-nav {
+      li {
+        a {
+          color: $yellow;
+        }
+      }
     }
-    .arrow {
-      font-size: $fontsize-basic +50;
+    .navbar-right {
+      @extend .navbar-nav;
+      border: solid 1px $yellow;
     }
   }
-  .form {
-    @extend .mention;
-    label {
-      min-width: 100px;
-      line-height: 50px;
+
+  /*
+  * Header region
+  */
+  header {
+    min-height: 300px;
+    background: url("../images/palm-leaves-250-min.png") no-repeat right 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .experience {
+      position: absolute;
+      margin-top: 20px;
+      //height: 250px;
+      //width: 250px;
+      float: left;
+      z-index: 200;
+      @include scale(1);
+      transition: all 0.4s ease-in-out;
     }
-    input[type="submit"] {
+    .experience.stick {
+      position: fixed;
+      @include scale(0.7);
+      transition: all 0.4s ease-in-out;
+      top: 10px;
+    }
+    .site-name {
+      position: absolute;
+      width: 90%;
+      font-size: $fontsize-basic +20;
+      margin-top: 80px;
+      color: white;
+      padding: 18px 0 18px 100px;
+      margin-left: 10%;
       background: $yellow;
-      border: none;
-      padding: 5px 15px;
-      margin-left: 330px;
+      z-index: -100;
+    }
+    .acties {
+      position: absolute;
+      margin-left: 90%;
+      top: 80px;
+      height: 87px;
+      width: 87px;
+      background: url("../images/Infobox_info_icon.svg-min.png") no-repeat center;
+    }
+    .acties:hover {
+      background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center;
     }
   }
-}
 
-footer {
-  .footer-wrap {
-    //@extend .center;
-    .footer-canvas {
-      min-height: 200px;
+  .center {
+    margin-bottom: 20px;
+    .main-wrap {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 25px 0;
+      min-height: 350px;
+      margin-top: 100px;
+    }
+    .main-wrap-top {
+      @extend .main-wrap;
+      margin-top: -100px;
+    }
+    .main-wrap-acties {
+      .yellow-canvas {
+        color: $green;
+      }
     }
   }
-}
 
-
-
-@media screen and (max-width: 500px) {
-  .image-wrap {
-    display: none;
+  .green-canvas {
+    background: $green;
+    max-width: 60%;
+    color: white;
+    min-height: 300px;
+    padding: 2%;
+    margin: 2% auto;
+    img {
+      width: 95%;
+      height: auto;
+    }
+    .image-wrap {
+      padding-top: 3%;
+    }
+    .content {
+      padding: 2%;
+    }
   }
-}
+
+  //contactform region
+  .yellow-canvas {
+    max-width: 60%;
+    color: white;
+    min-height: 300px;
+    padding: 2%;
+    margin: 2% auto;
+    background: $yellow;
+    .mention {
+      //aankondiging contactform
+      background: $green;
+      padding: 25px;
+      p {
+        font-size: $fontsize-basic +10;
+        font-weight: bold;
+      }
+      .arrow-down {
+        display: none;
+      }
+      .arrow {
+        font-size: $fontsize-basic +50;
+      }
+    }
+    .form {
+      background: $green;
+      padding: 25px;
+      label {
+        min-width: 100px;
+        line-height: 50px;
+      }
+      input[type="submit"] {
+        background: $yellow;
+        border: none;
+        padding: 5px 15px;
+        margin-left: 330px;
+      }
+    }
+  }
+
+  // footer region
+  footer {
+    .footer-wrap {
+      .footer-canvas {
+        .address {
+          font-size: $fontsize-basic +8;
+        }
+      }
+    }
+    .phone-mobile {
+      display: none;
+      margin: 15px 0;
+      .btn {
+        width: 100%;
+      }
+      .btn-info {
+        background: $yellow;
+        @include roundcorners(0px);
+        border: none;
+        color: $green;
+        padding: 10px;
+        &:hover {
+          color: #ffffff;
+          background: $yellow;
+        }
+      }
+    }
+  }
+
+
+
+
+  /*
+  *media query's
+  */
+
+  @media only screen and (max-width: 1366px) {
+    /* css code voor tablets in landscape mode
+    De 1366px op aanraden van Koen (was 1024)*/
+  }
+
+  @media only screen and (max-width: 960px) {
+    /* css code voor tablets in portrait mode */
+  }
+
+  @media only screen and (max-width: 767px) {
+    /* css code voor smartphones in landscape mode */
+  }
+
+  @media only screen and (max-width: 479px) {
+    /* css code voor smartphones in portrait mode */
+
+    header {
+      background: none;
+      .experience {
+        @include scale(0.6);
+        margin-left: -30px;
+      }
+      .experience.stick {
+        position: fixed;
+        @include scale(0);
+      }
+      .site-name {
+        font-size: $fontsize-basic +8;
+        margin-top: 80px;
+        padding: 18px 0 18px 100px;
+        margin-left: 10%;
+      }
+      //als test uitgeschakeld
+      .actie-wrap {
+        display: none;
+      }
+    }
+
+    .mention {
+      .arrow-right {
+        display: none;
+      }
+    }
+
+    .green-canvas {
+      max-width: 90%;
+    }
+    .yellow-canvas {
+      max-width: 90%;
+      .form {
+        input[type="submit"] {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    .image-wrap {
+      display: none;
+    }
+
+    .center {
+      .main-wrap {
+        margin-top: 25px;
+      }
+    }
+
+    footer {
+      .phone-mobile {
+        display: block;
+      }
+      .phone-screen {
+        display: none;
+      }
+    }
+
+  }
 
