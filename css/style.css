@@ -175,8 +175,8 @@ header {
     height: 87px;
     width: 87px;
     background: url("../images/Infobox_info_icon.svg-min.png") no-repeat center; }
-  header .acties:hover {
-    background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center; }
+    header .acties:hover {
+      background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center; }
 
 .center {
   margin-bottom: 20px; }
@@ -236,6 +236,11 @@ header {
 
 footer .footer-wrap .footer-canvas .address {
   font-size: 20px; }
+  footer .footer-wrap .footer-canvas .address .mail a {
+    color: #ffffff; }
+    footer .footer-wrap .footer-canvas .address .mail a:hover {
+      color: #f1db00;
+      text-decoration: none; }
 footer .phone-mobile {
   display: none;
   margin: 15px 0; }
@@ -266,7 +271,8 @@ footer .phone-mobile {
 @media only screen and (max-width: 479px) {
   /* css code voor smartphones in portrait mode */
   header {
-    background: none; }
+    background: none;
+    min-height: 200px; }
     header .experience {
       -moz-transform: scale(0.6);
       -o-transform: scale(0.6);
@@ -289,16 +295,23 @@ footer .phone-mobile {
     header .actie-wrap {
       display: none; }
 
-  .mention .arrow-right {
-    display: none; }
-
   .green-canvas {
     max-width: 90%; }
 
   .yellow-canvas {
     max-width: 90%; }
+    .yellow-canvas .mention .arrow-right {
+      display: none; }
+    .yellow-canvas .mention .arrow-down {
+      display: block; }
+    .yellow-canvas .form input[type="text"] {
+      width: 100%; }
+    .yellow-canvas .form input[type="email"] {
+      width: 100%; }
+    .yellow-canvas .form textarea[name="bericht"] {
+      width: 100%; }
     .yellow-canvas .form input[type="submit"] {
-      margin-left: 0px; }
+      margin-left: 0; }
 
   .image-wrap {
     display: none; }

@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php print $head; ?>
-    <title>Neyens - Tuinen</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/sticky.js"></script>
-    <script src="../js/functions.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
 <div class="fullscreen-bg">
     <video loop muted autoplay poster="../video/jasmine_flower_127/snapshot-min.PNG" class="fullscreen-bg__video">
         <source src="../video/jasmine_flower_127/Jasmine_flower.mp4" type="video/mp4">
@@ -71,7 +48,9 @@
         </div>
     </div>
     <div class="actie-wrap">
-        <a href="#acties"><div class="acties"></div></a>
+        <a href="#acties">
+            <div class="acties"></div>
+        </a>
     </div>
 </header>
 
@@ -79,23 +58,32 @@
     <div class="main-wrap-top">
         <div class="row green-canvas">
             <figure class="col-md-4 image-wrap"><img src="../images/tuin.jpg"></figure>
-            <article class="col-md-8 content">
+            <article class="col-md-8 content"><!-- main content -->
                 <span>
-                    <h1>Neyens Tuinaanleg en Groenonderhoud</h1>
-                <p>Wij zijn gespecialiseerd in het aanleggen en onderhouden van privé tuinen
-                    en parken aanleggen van verhardingen, waterpartijen, automatische beregeningen,
-                    tuinverlichtingen, beplantingen en gazons.</p>
-                    <p>Industriele ruimtes zoals parkings, beplantingen en grasperken wij
-                        bieden een totaal pakket voor aanleg en onderhoud aan alle bedrijven.</p>
-                    <p>Gemeentelijk groen aanleg en onderhoud van stadsparken, voetbalvelden en
-                        speelterreinen, het wekelijks onderhoud van beplantingen en grasperken.</p>
-                    <p>Alle Grondwerken met minigraver en kniklader aan nieuwbouw en renovatieprojecten -
-                        tevens rioleringswerken.</p>
-
-                        <p>Verhuur van citycontainer voor 6m³ en 9 m³.</p>
+                    <?php print $messages; ?>
+                    <div id="main-wrapper">
+                        <div id="main" class="clearfix">
+                            <div id="content" class="column">
+                                <div class="section">
+                                    <a id="main-content"></a>
+                                    <?php print render($title_prefix); ?>
+                                    <?php if ($title): ?>
+                                        <h1 class="title" id="page-title"><?php print $title; ?></h1>
+                                    <?php endif; ?>
+                                    <?php print render($title_suffix); ?>
+                                    <?php if ($tabs): ?>
+                                        <div class="tabs"><?php print render($tabs); ?></div>
+                                    <?php endif; ?>
+                                    <?php print render($page['help']); ?>
+                                    <?php if ($action_links): ?>
+                                        <ul class="action-links"><?php print render($action_links); ?></ul>
+                                    <?php endif; ?>
+                                    <?php print render($page['content']); ?>
+                                </div>
+                            </div>
+                            <!-- /.section, /#content -->
                 </span>
             </article>
-
         </div>
     </div>
 </section>
@@ -195,6 +183,7 @@
         <div class="row yellow-canvas">
             <div class="col-md-5 mention">
                 <p>Contacteer ons via dit formulier voor al je vragen of voor een offerte</p>
+
                 <div class="arrow-right">
                     <i class="fa fa-arrow-right arrow"></i>
                 </div>
@@ -252,7 +241,7 @@
                 <div class="mail margin-bottom">
                     <i class="fa fa-envelope"></i>
                     <script type="text/javascript">
-                        document.write("<a href=\"mail" + "to:" + new Array("info","neyens.be").join("@") + "\">" +  "info@neyens.be" + "</" + "a>");
+                        document.write("<a href=\"mail" + "to:" + new Array("info", "neyens.be").join("@") + "\">" + "info@neyens.be" + "</" + "a>");
                     </script>
                 </div>
                 <div class="btw margin-bottom">
@@ -261,7 +250,8 @@
                 <div>
                     <p>Postadres :<br>Weyerstraat 325<br>3850 Kozen België</p>
                 </div>
-            </div><!-- end address -->
+            </div>
+            <!-- end address -->
 
             <div class="col-sm-6">
                 <img src="../images/logo_small.jpg">
@@ -270,5 +260,3 @@
         </div>
     </div>
 </footer>
-</body>
-</html>

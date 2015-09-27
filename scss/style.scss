@@ -8,6 +8,7 @@ $yellow: #f1db00;
 $green: #61a534;
 $grey: #eaeadf;
 $margin-b: 10px;
+$field_width: 100%;
 
 body {
   margin: 0;
@@ -45,302 +46,323 @@ h3 {
   margin-bottom: $margin-b;
 }
 
-  /*
-  * video background
-  */
+/*
+* video background
+*/
 
-  .fullscreen-bg {
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+//dit om de video te centeren
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+/*
+* Navigation
+*/
+
+.navbar-fixed-top {
+  background: $green;
+}
+
+.navbar-default {
+  border-bottom: solid 1px $yellow;
+  .navbar-nav {
+    li {
+      a {
+        color: $yellow;
+      }
+    }
+  }
+  .navbar-right {
+    @extend .navbar-nav;
+    border: solid 1px $yellow;
+  }
+}
+
+/*
+* Header region
+*/
+header {
+  min-height: 300px;
+  background: url("../images/palm-leaves-250-min.png") no-repeat right 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .experience {
+    position: absolute;
+    margin-top: 20px;
+    //height: 250px;
+    //width: 250px;
+    float: left;
+    z-index: 200;
+    @include scale(1);
+    transition: all 0.4s ease-in-out;
+  }
+  .experience.stick {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
+    @include scale(0.7);
+    transition: all 0.4s ease-in-out;
+    top: 10px;
+  }
+  .site-name {
+    position: absolute;
+    width: 90%;
+    font-size: $fontsize-basic +20;
+    margin-top: 80px;
+    color: white;
+    padding: 18px 0 18px 100px;
+    margin-left: 10%;
+    background: $yellow;
     z-index: -100;
   }
-
-  .fullscreen-bg__video {
+  .acties {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  //dit om de video te centeren
-  @media (min-aspect-ratio: 16/9) {
-    .fullscreen-bg__video {
-      height: 300%;
-      top: -100%;
+    margin-left: 90%;
+    top: 80px;
+    height: 87px;
+    width: 87px;
+    background: url("../images/Infobox_info_icon.svg-min.png") no-repeat center;
+    &:hover {
+      background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center;
     }
   }
+}
 
-  @media (max-aspect-ratio: 16/9) {
-    .fullscreen-bg__video {
-      width: 300%;
-      left: -100%;
+.center {
+  margin-bottom: 20px;
+  .main-wrap {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px 0;
+    min-height: 350px;
+    margin-top: 100px;
+  }
+  .main-wrap-top {
+    @extend .main-wrap;
+    margin-top: -100px;
+  }
+  .main-wrap-acties {
+    .yellow-canvas {
+      color: $green;
     }
   }
+}
 
-  /*
-  * Navigation
-  */
+.green-canvas {
+  background: $green;
+  max-width: 60%;
+  color: white;
+  min-height: 300px;
+  padding: 2%;
+  margin: 2% auto;
+  img {
+    width: 95%;
+    height: auto;
+  }
+  .image-wrap {
+    padding-top: 3%;
+  }
+  .content {
+    padding: 2%;
+  }
+}
 
-  .navbar-fixed-top {
+//contactform region
+.yellow-canvas {
+  max-width: 60%;
+  color: white;
+  min-height: 300px;
+  padding: 2%;
+  margin: 2% auto;
+  background: $yellow;
+  .mention {
+    //aankondiging contactform
     background: $green;
+    padding: 25px;
+    p {
+      font-size: $fontsize-basic +10;
+      font-weight: bold;
+    }
+    .arrow-down {
+      display: none;
+    }
+    .arrow {
+      font-size: $fontsize-basic +50;
+    }
   }
+  .form {
+    background: $green;
+    padding: 25px;
+    label {
+      min-width: 100px;
+      line-height: 50px;
+    }
+    input[type="submit"] {
+      background: $yellow;
+      border: none;
+      padding: 5px 15px;
+      margin-left: 330px;
+    }
+  }
+}
 
-  .navbar-default {
-    border-bottom: solid 1px $yellow;
-    .navbar-nav {
-      li {
-        a {
-          color: $yellow;
+// footer region
+footer {
+  .footer-wrap {
+    .footer-canvas {
+      .address {
+        font-size: $fontsize-basic +8;
+        .mail {
+          a {
+            color: #ffffff;
+            &:hover {
+              color: $yellow;
+              text-decoration: none;
+            }
+          }
         }
       }
     }
-    .navbar-right {
-      @extend .navbar-nav;
-      border: solid 1px $yellow;
+  }
+  .phone-mobile {
+    display: none;
+    margin: 15px 0;
+    .btn {
+      width: 100%;
+    }
+    .btn-info {
+      background: $yellow;
+      @include roundcorners(0px);
+      border: none;
+      color: $green;
+      padding: 10px;
+      &:hover {
+        color: #ffffff;
+        background: $yellow;
+      }
     }
   }
+}
 
-  /*
-  * Header region
-  */
+/*
+*media query's
+*/
+
+@media only screen and (max-width: 1366px) {
+  /* css code voor tablets in landscape mode
+  De 1366px op aanraden van Koen (was 1024)*/
+}
+
+@media only screen and (max-width: 960px) {
+  /* css code voor tablets in portrait mode */
+}
+
+@media only screen and (max-width: 767px) {
+  /* css code voor smartphones in landscape mode */
+}
+
+@media only screen and (max-width: 479px) {
+  /* css code voor smartphones in portrait mode */
+
   header {
-    min-height: 300px;
-    background: url("../images/palm-leaves-250-min.png") no-repeat right 50px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    background: none;
+    min-height: 200px;
     .experience {
-      position: absolute;
-      margin-top: 20px;
-      //height: 250px;
-      //width: 250px;
-      float: left;
-      z-index: 200;
-      @include scale(1);
-      transition: all 0.4s ease-in-out;
+      @include scale(0.6);
+      margin-left: -30px;
     }
     .experience.stick {
       position: fixed;
-      @include scale(0.7);
-      transition: all 0.4s ease-in-out;
-      top: 10px;
+      @include scale(0);
     }
     .site-name {
-      position: absolute;
-      width: 90%;
-      font-size: $fontsize-basic +20;
+      font-size: $fontsize-basic +8;
       margin-top: 80px;
-      color: white;
       padding: 18px 0 18px 100px;
       margin-left: 10%;
-      background: $yellow;
-      z-index: -100;
     }
-    .acties {
-      position: absolute;
-      margin-left: 90%;
-      top: 80px;
-      height: 87px;
-      width: 87px;
-      background: url("../images/Infobox_info_icon.svg-min.png") no-repeat center;
-    }
-    .acties:hover {
-      background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center;
+    //als test uitgeschakeld
+    .actie-wrap {
+      display: none;
     }
   }
 
   .center {
-    margin-bottom: 20px;
-    .main-wrap {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 25px 0;
-      min-height: 350px;
-      margin-top: 100px;
-    }
-    .main-wrap-top {
-      @extend .main-wrap;
-      margin-top: -100px;
-    }
-    .main-wrap-acties {
-      .yellow-canvas {
-        color: $green;
-      }
-    }
   }
 
   .green-canvas {
-    background: $green;
-    max-width: 60%;
-    color: white;
-    min-height: 300px;
-    padding: 2%;
-    margin: 2% auto;
-    img {
-      width: 95%;
-      height: auto;
-    }
-    .image-wrap {
-      padding-top: 3%;
-    }
-    .content {
-      padding: 2%;
-    }
+    max-width: 90%;
   }
-
-  //contactform region
   .yellow-canvas {
-    max-width: 60%;
-    color: white;
-    min-height: 300px;
-    padding: 2%;
-    margin: 2% auto;
-    background: $yellow;
-    .mention {
-      //aankondiging contactform
-      background: $green;
-      padding: 25px;
-      p {
-        font-size: $fontsize-basic +10;
-        font-weight: bold;
-      }
-      .arrow-down {
-        display: none;
-      }
-      .arrow {
-        font-size: $fontsize-basic +50;
-      }
-    }
-    .form {
-      background: $green;
-      padding: 25px;
-      label {
-        min-width: 100px;
-        line-height: 50px;
-      }
-      input[type="submit"] {
-        background: $yellow;
-        border: none;
-        padding: 5px 15px;
-        margin-left: 330px;
-      }
-    }
-  }
-
-  // footer region
-  footer {
-    .footer-wrap {
-      .footer-canvas {
-        .address {
-          font-size: $fontsize-basic +8;
-        }
-      }
-    }
-    .phone-mobile {
-      display: none;
-      margin: 15px 0;
-      .btn {
-        width: 100%;
-      }
-      .btn-info {
-        background: $yellow;
-        @include roundcorners(0px);
-        border: none;
-        color: $green;
-        padding: 10px;
-        &:hover {
-          color: #ffffff;
-          background: $yellow;
-        }
-      }
-    }
-  }
-
-
-
-
-  /*
-  *media query's
-  */
-
-  @media only screen and (max-width: 1366px) {
-    /* css code voor tablets in landscape mode
-    De 1366px op aanraden van Koen (was 1024)*/
-  }
-
-  @media only screen and (max-width: 960px) {
-    /* css code voor tablets in portrait mode */
-  }
-
-  @media only screen and (max-width: 767px) {
-    /* css code voor smartphones in landscape mode */
-  }
-
-  @media only screen and (max-width: 479px) {
-    /* css code voor smartphones in portrait mode */
-
-    header {
-      background: none;
-      .experience {
-        @include scale(0.6);
-        margin-left: -30px;
-      }
-      .experience.stick {
-        position: fixed;
-        @include scale(0);
-      }
-      .site-name {
-        font-size: $fontsize-basic +8;
-        margin-top: 80px;
-        padding: 18px 0 18px 100px;
-        margin-left: 10%;
-      }
-      //als test uitgeschakeld
-      .actie-wrap {
-        display: none;
-      }
-    }
-
+    max-width: 90%;
     .mention {
       .arrow-right {
         display: none;
       }
-    }
-
-    .green-canvas {
-      max-width: 90%;
-    }
-    .yellow-canvas {
-      max-width: 90%;
-      .form {
-        input[type="submit"] {
-          margin-left: 0px;
-        }
-      }
-    }
-
-    .image-wrap {
-      display: none;
-    }
-
-    .center {
-      .main-wrap {
-        margin-top: 25px;
-      }
-    }
-
-    footer {
-      .phone-mobile {
+      .arrow-down {
         display: block;
       }
-      .phone-screen {
-        display: none;
+    }
+    .form {
+      input[type="text"] {
+        width: $field_width;
+      }
+      input[type="email"] {
+        width: $field_width;
+      }
+      textarea[name="bericht"] {
+        width: $field_width;
+      }
+      input[type="submit"] {
+        margin-left: 0;
       }
     }
-
   }
+
+  .image-wrap {
+    display: none;
+  }
+
+  .center {
+    .main-wrap {
+      margin-top: 25px;
+    }
+  }
+
+  footer {
+    .phone-mobile {
+      display: block;
+    }
+    .phone-screen {
+      display: none;
+    }
+  }
+
+}
 
