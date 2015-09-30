@@ -61,3 +61,5 @@ contact <i class="fa fa-envelope"></i>
 ```
 Experience cirkel Sticky after scroll (sticky.js) + aantal transform effecten
 
+Drupal online stuk
+inhoudstype article enkel gebruikt als hoofd/welkom tekst op de homepage (noe--article.tpl.php)

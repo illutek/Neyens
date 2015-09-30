@@ -201,7 +201,7 @@ header {
     width: 95%;
     height: auto; }
   .green-canvas .image-wrap {
-    padding-top: 3%; }
+    padding-top: 5%; }
   .green-canvas .content {
     padding: 2%; }
 
@@ -323,5 +323,7 @@ footer .phone-mobile {
     display: block; }
   footer .phone-screen {
     display: none; } }
+#toolbar {
+  margin: 50px -20px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -186,7 +186,7 @@ header {
     height: auto;
   }
   .image-wrap {
-    padding-top: 3%;
+    padding-top: 5%;
   }
   .content {
     padding: 2%;
@@ -366,3 +366,9 @@ footer {
 
 }
 
+// aanpassingen adminimal/beheerthema
+// dit om de admin toolbar onder de nav-bar te tonen
+// dit enkel vaar de administrator
+#toolbar {
+  margin: 50px -20px;
+}
