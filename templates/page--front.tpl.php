@@ -54,7 +54,8 @@
     </div>
 </header>
 
-
+<!-- regions welkom plaats voor de welkom tekst - inhoudstype 'article' (core)
+ + node--article.tpl.php -->
 <section class="center">
     <div class="main-wrap-top">
         <div class="row green-canvas">
@@ -62,79 +63,31 @@
         </div>
     </div>
 </section>
+<!-- regions prive plaats voor de prive tekst - inhoudstype 'activiteiten' (filter op field_soort_activiteit)
+ + node--activiteit.tpl.php -->
 <section class="center" id="prive-tuinen">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <figure class="col-md-4 image-wrap"><img src="../images/prive.jpg"></figure>
-            <article class="col-md-8 content">
-                <span>
-                    <h2>Privé tuinen en parken</h2>
-                <p>Aanleg en Renovaties van bestaande tuinen.
-                    Tuinaanleg van nieuwbouw woningen, het leveren en plaatsen van alle soorten
-                    verhardingen, leveren en plaatsen van tuinverlichtingen, alle soorten
-                    afsluitingen gaande van draad, hout, betonproducten enz.
-                    Planten van sierplanten, bomen en vaste planten zaiien van alle type's
-                    grasperken inclusief kunstgrassen.
-                    Alle grondwerken zoals leveren en verspreiden van zwarte grond nivelleren
-                    van terreinen met laadgraafcombinatie of bobcat voor kleinere ruimtes.
-                    Plaatsen van alle leidingen zoals water, stroom, afvoer, telefoon,
-                    met minigraver alle kleine grondwerken.</p>
-                    <p>Alle tuinwerken kunnen we apart uitvoeren voor de doe-het-zelvers en
-                        voor ieders budget.</p>
-                    <p>Tevens het plaatsen van containers voor groenafval en tuinresten.</p>
-                </span>
-            </article>
+            <?php print render($page['prive']); ?>
         </div>
     </div>
 </section>
-
+<!-- regions bedrijven plaats voor de bedrijven tekst - inhoudstype 'activiteiten' (filter op field_soort_activiteit)
+ + node--activiteit.tpl.php -->
 <section class="center" id="bedrijven">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <figure class="col-md-4 image-wrap"><img src="../images/bedrijven.jpg"></figure>
-            <div class="col-md-8 content">
-                <span>
-                <h2>Bedrijven en Industrieparken</h2>
-                <p>Het aanleggen van wegen en parkings op industrie terreinen en rondom gebouwen.
-                    Het leveren en plaatsen van omheiningen en poorten, afsluitingen in verschillende
-                    materialen zoals draad, hout, betonproducten.</p>
-                    <p>Plaatsen van rioleringen en afvoerputten. Leveren en plaatsen van verlichtingen.
-                        Het leveren en planten van groenbeplantingen sierheester en bomen.</p>
-                    <p>Het aanleggen van grasperken.</p>
-                    <p>Wekelijks onderhoud van uw bedrijfsterrein zowal grasmatten als beplantingen
-                        kan door ons uitgevoerd worden.Tevens kan u op ons rekenen voor het
-                        winteronderhoud van uw wegen en parkings het sneeuwvrij maken en het
-                        strooien van zout.</p>
-                    <p>Ook wanneer uw bedrijf niet door ons is aangelegd kan u steeds op ons
-                        beroep doen voor de nodige onderhoudswerken en winterdiensten.</p>
-                </span>
+            <?php print render($page['bedrijf']); ?>
             </div>
         </div>
     </div>
 </section>
-
+<!-- regions steden plaats voor de steden tekst - inhoudstype 'activiteiten' (filter op field_soort_activiteit)
+ + node--activiteit.tpl.php -->
 <section class="center" id="steden">
     <div class="main-wrap">
         <div class="row green-canvas">
-            <figure class="col-md-4 image-wrap"><img src="../images/steden.jpg"></figure>
-            <div class="col-md-8 content">
-                <span>
-                <h2>Steden en Gemeenten</h2>
-                <p>Het aanleggen van openbaar groen van parken,het realiseren van
-                    speelpleinen zowel de grasperken als zandbakken tot het leveren en
-                    plaatsen van alle gekeurde speeltoestellen.het aanleggen van sportpleinen
-                    zowel in grasmatten als het kunstgras ,tevens kunnen wij het wekelijks
-                    maaien van uw sportvelden uitvoeren eventueel met opvang van het gras
-                    ofwel het mulchen.</p>
-                    <p>Het aanplanten van bomen en sierheesters langs wegen en waterwegen.
-                        het onderhoud van fietspaden zowel het zomeronderhoud
-                        (borstelen en afranden) als het winteronderhoud (sneeuwvrij maken en
-                        strooien van zout of pekel) kunnen wij uitvoeren vraag hiervoor een
-                        passende offertte aan. Het plaatsen van inritten en voetpaden.</p>
-                    <p>De complete aanleg en groenonderhoudswerken van speelpleinen, kerkhoven,
-                        sportterreinen en aan alle openbare gebouwen.</p>
-                </span>
-            </div>
+            <?php print render($page['steden']); ?>
         </div>
     </div>
 </section>

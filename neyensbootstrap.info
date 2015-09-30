@@ -17,3 +17,9 @@ scripts[]   =   js/sticky.js
 ;REGIONS
 regions[content]    = Content
 regions[welkom]     = Welkom tekst
+regions[prive]      = Privé
+regions[bedrijf]    = Bedrijf
+regions[steden]     = Steden
+regions[realisaties]= Realisaties
+regions[contact]    = Contact
+regions[actions]    = Acties
