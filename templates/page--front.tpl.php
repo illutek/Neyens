@@ -91,8 +91,7 @@
         </div>
     </div>
 </section>
-
-
+<!-- -->
 <section class="center" id="realisaties">
     <div class="main-wrap">
         <div class="green-canvas">
@@ -104,7 +103,7 @@
         </div>
     </div>
 </section>
-
+<!-- contact formulier enkel in de rechter col-md-->
 <section class="center" id="contact">
     <div class="main-wrap">
         <div class="row yellow-canvas">
@@ -117,31 +116,19 @@
                 <div class="arrow-down">
                     <i class="fa fa-arrow-down arrow"></i>
                 </div>
-
             </div>
+            <!-- het formulier -->
             <div class="col-md-6 col-md-offset-1 form">
-                <form>
-                    <label>Jouw naam</label> <input type="text" size="40" name="name"><br>
-                    <label>e-mail</label> <input type="email" size="40" name="email"><br>
-                    <label>Bericht</label> <textarea name="bericht" row="8" cols="40"></textarea><br>
-                    <input type="submit" value="Submit">
-                </form>
+                <?php print render($page['contact']); ?>
             </div>
         </div>
     </div>
 </section>
-
+<!-- acties er wordt altijd een actie getoond daarom ook geen controle -->
 <section class="center" id="acties">
     <div class="main-wrap-acties">
         <div class="row yellow-canvas">
-            <span>
-                <h2>Aktie : Korting van 10% op uw huidig onderhoudscontract - Offertte</h2>
-            <p>Aktie van 10 % korting op uw huidig groenonderhoudscontract.</p>
-            <p>Hebt u een lagere offerte dan de onze, dan verlagen wij onze prijs - Zodat wij deze steeds aan de beste
-                voorwaarden kunnen voldoen!
-                Nieuw : Plaatsen van Citycontainers voor groenafval max 10m³ aan voordelige prijzen.
-                Plaatsen van Citycontainers voor alle soorten afval, vanaf 6 m³ VRAAG NAAR DE PLAATSINGSVOORWAARDEN</p>
-            </span>
+            <?php print render($page['actions']); ?>
         </div>
     </div>
 </section>
