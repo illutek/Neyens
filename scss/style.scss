@@ -17,6 +17,10 @@ body {
   background: #bfc773;
   height: 100%;
   width: 100%;
+  &.page-user-login {
+    background: url("../video/jasmine_flower_127/snapshot-min.PNG") no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 p {
@@ -46,9 +50,34 @@ h3 {
   margin-bottom: $margin-b;
 }
 
-/*
-* video background
-*/
+// de login pagina better login
+
+#auth_box {
+  #top_part {
+    h1 {
+      &#the_logo {
+        img {
+          max-width: 100%;
+        }
+        a {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  #bottom_part {
+    .password_link {
+      a {
+        color: $yellow;
+      }
+    }
+    .back_link {
+      @extend .password_link;
+    }
+  }
+}
+
+//video background
 
 .fullscreen-bg {
   position: fixed;
@@ -220,14 +249,30 @@ header {
     background: $green;
     padding: 25px;
     label {
-      min-width: 100px;
+      min-width: 25%;
       line-height: 50px;
+    }
+    input[type='text'] {
+      width: 75%;
+      float: right;
+      clear: both;
+      padding: 5px;
+      color: $green;
+    }
+    input[type='email'] {
+      @extend input[type='text'];
+    }
+    textarea {
+      @extend input[type='text'];
     }
     input[type="submit"] {
       background: $yellow;
       border: none;
       padding: 5px 15px;
-      margin-left: 330px;
+      float: right;
+    }
+    .resizable-textarea .grippie {
+      display: none;
     }
   }
 }
@@ -247,6 +292,12 @@ footer {
             }
           }
         }
+      }
+    }
+    .footer-right {
+      a {
+        text-decoration: none;
+        color: #ffffff;
       }
     }
   }
@@ -336,7 +387,7 @@ footer {
       input[type="email"] {
         width: $field_width;
       }
-      textarea[name="bericht"] {
+      textarea {
         width: $field_width;
       }
       input[type="submit"] {

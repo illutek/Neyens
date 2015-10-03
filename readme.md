@@ -61,5 +61,10 @@ contact <i class="fa fa-envelope"></i>
 ```
 Experience cirkel Sticky after scroll (sticky.js) + aantal transform effecten
 
-Drupal online stuk
+Drupal online
 inhoudstype article enkel gebruikt als hoofd/welkom tekst op de homepage (noe--article.tpl.php)
+
+page--front.tpl.php en page.tpl.php voor structuur
+De indentieke delen op de page en front--page vervangen door inc.php onderdelen
+- footer.inc.php - header.inc.php - fullscreen_bg.inc.php (de video background)
+```<?php include 'footer.inc.php'; ?> ```

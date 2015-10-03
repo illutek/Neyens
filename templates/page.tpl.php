@@ -1,11 +1,6 @@
-<div class="fullscreen-bg">
-    <video loop muted autoplay poster="<?php print base_path() . path_to_theme(); ?>/video/jasmine_flower_127/snapshot-min.PNG" class="fullscreen-bg__video">
-        <source src="<?php print base_path() . path_to_theme(); ?>/video/jasmine_flower_127/Jasmine_flower.mp4" type="video/mp4">
-        <source src="<?php print base_path() . path_to_theme(); ?>/video/jasmine_flower_127/Jasmine_flower.ogv" type="video/ogv">
-        <source src="<?php print base_path() . path_to_theme(); ?>/video/jasmine_flower_127/Jasmine_flower.ogg" type="video/ogg">
-        <source src="<?php print base_path() . path_to_theme(); ?>/video/jasmine_flower_127/Jasmine_flower.webmsd.webm" type="video/webm">
-    </video>
-</div>
+<!-- include fullscreen video background fullscreen_bg.inc.php -->
+<?php include 'fullscreen_bg.inc.php'; ?>
+
 <!-- navigatie fixed top -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -29,25 +24,8 @@
     </div>
 </nav>
 <div id="home"></div>
-<header class="container">
-    <div class="row">
-        <div class="experience">
-            <a href="#home">
-                <figure><img src="<?php print base_path() . path_to_theme(); ?>/images/twentyfive_year_active-stroke-200-min.png"></figure>
-            </a>
-        </div>
-        <div id="sticky-anchor"></div>
-        <!-- als deze de top vd page bereikt wordt .experience sticky -->
-        <div class="site-name">
-            <?php print $site_name; ?>
-        </div>
-    </div>
-    <div class="actie-wrap">
-        <a href="#acties">
-            <div class="acties"></div>
-        </a>
-    </div>
-</header>
+<!-- de header region include header.inc.php -->
+<?php include 'header.inc.php'; ?>
 
 <section class="center">
     <div class="main-wrap-top">
@@ -94,45 +72,6 @@
     </div>
 </section>
 
-<footer>
-    <div class="footer-wrap">
-        <div class="row green-canvas footer-canvas">
-            <div class="col-sm-6 address">
-                <div class="phone-screen margin-bottom">
-                    <i class="fa fa-phone"></i> 003211/63.35.28
-                </div>
-                <div class="phone-mobile margin-bottom">
-                    <a href="tel:+3211633528" class="btn btn-info">
-                        <i class="fa fa-phone"></i> 003211/63.35.28
-                    </a>
-                </div>
-                <div class="phone-screen margin-bottom">
-                    <i class="fa fa-mobile"></i> 0495/30.35.28
-                </div>
-                <div class="phone-mobile margin-bottom">
-                    <a href="tel:+32495303528" class="btn btn-info">
-                        <i class="fa fa-mobile"></i> 0495/30.35.28
-                    </a>
-                </div>
-                <div class="mail margin-bottom">
-                    <i class="fa fa-envelope"></i>
-                    <script type="text/javascript">
-                        document.write("<a href=\"mail" + "to:" + new Array("info", "neyens.be").join("@") + "\">" + "info@neyens.be" + "</" + "a>");
-                    </script>
-                </div>
-                <div class="btw margin-bottom">
-                    BE 0705.544.643
-                </div>
-                <div>
-                    <p>Postadres :<br>Weyerstraat 325<br>3850 Kozen België</p>
-                </div>
-            </div>
-            <!-- end address -->
+<!-- de footer region include footer.inc.php -->
 
-            <div class="col-sm-6">
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/logo_small.jpg" alt="Neyens oud logo">
-                Neyens | &copy; 2015
-            </div>
-        </div>
-    </div>
-</footer>
+<?php include 'footer.inc.php'; ?>

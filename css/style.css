@@ -69,6 +69,9 @@ body {
   background: #bfc773;
   height: 100%;
   width: 100%; }
+  body.page-user-login {
+    background: url("../video/jasmine_flower_127/snapshot-min.PNG") no-repeat center center fixed;
+    background-size: cover; }
 
 p {
   margin-bottom: 15px; }
@@ -89,9 +92,13 @@ h3 {
 .margin-bottom {
   margin-bottom: 10px; }
 
-/*
-* video background
-*/
+#auth_box #top_part h1#the_logo img, #auth_box #top_part h2#the_logo img, #auth_box #top_part h3#the_logo img {
+  max-width: 100%; }
+#auth_box #top_part h1#the_logo a, #auth_box #top_part h2#the_logo a, #auth_box #top_part h3#the_logo a {
+  color: #f1db00; }
+#auth_box #bottom_part .password_link a, #auth_box #bottom_part .back_link a {
+  color: #f1db00; }
+
 .fullscreen-bg {
   position: fixed;
   top: 0;
@@ -226,13 +233,21 @@ header {
     background: #61a534;
     padding: 25px; }
     .yellow-canvas .form label {
-      min-width: 100px;
+      min-width: 25%;
       line-height: 50px; }
+    .yellow-canvas .form input[type='text'], .yellow-canvas .form input[type='email'], .yellow-canvas .form textarea {
+      width: 75%;
+      float: right;
+      clear: both;
+      padding: 5px;
+      color: #61a534; }
     .yellow-canvas .form input[type="submit"] {
       background: #f1db00;
       border: none;
       padding: 5px 15px;
-      margin-left: 330px; }
+      float: right; }
+    .yellow-canvas .form .resizable-textarea .grippie {
+      display: none; }
 
 footer .footer-wrap .footer-canvas .address {
   font-size: 20px; }
@@ -241,6 +256,9 @@ footer .footer-wrap .footer-canvas .address {
     footer .footer-wrap .footer-canvas .address .mail a:hover {
       color: #f1db00;
       text-decoration: none; }
+footer .footer-wrap .footer-right a {
+  text-decoration: none;
+  color: #ffffff; }
 footer .phone-mobile {
   display: none;
   margin: 15px 0; }
@@ -308,7 +326,7 @@ footer .phone-mobile {
       width: 100%; }
     .yellow-canvas .form input[type="email"] {
       width: 100%; }
-    .yellow-canvas .form textarea[name="bericht"] {
+    .yellow-canvas .form textarea {
       width: 100%; }
     .yellow-canvas .form input[type="submit"] {
       margin-left: 0; }
