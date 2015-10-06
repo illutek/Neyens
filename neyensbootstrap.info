@@ -13,6 +13,7 @@ scripts[]   =   js/bootstrap.min.js
 scripts[]   =   js/jquery.smooth-scroll.js
 scripts[]   =   js/functions.js
 scripts[]   =   js/sticky.js
+scripts[]   =   js/collapse.js
 
 ;REGIONS
 regions[content]    = Content

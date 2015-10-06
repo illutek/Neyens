@@ -20,6 +20,7 @@
                 <li><a href="#steden">Steden en gemeente <i class="fa fa-university"></i></a></li>
                 <li><a href="#realisaties">Realisaties <i class="fa fa-picture-o"></i></a></li>
                 <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
+                <li><a href="#acties">Actie <i class="fa fa-info"></i></a></li>
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
@@ -81,7 +82,7 @@
         </div>
     </div>
 </section>
-<!-- contact formulier enkel in de rechter col-md-->
+<!-- contact formulier enkel in de rechter col-md-6 -->
 <section class="center" id="contact">
     <div class="main-wrap">
         <div class="row yellow-canvas">

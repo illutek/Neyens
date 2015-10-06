@@ -46,6 +46,14 @@ h3 {
   font-size: $fontsize-basic +10;
 }
 
+a {
+  color: $yellow;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
 .margin-bottom {
   margin-bottom: $margin-b;
 }
@@ -122,6 +130,17 @@ h3 {
 
 .navbar-default {
   border-bottom: solid 1px $yellow;
+
+  .navbar-toggle {
+    border-color: $yellow;
+    border-radius: 0px;
+    .icon-bar {
+      background-color: $yellow;
+    }
+    &:hover {
+      background-color: $green;
+    }
+  }
   .navbar-nav {
     li {
       a {
@@ -234,6 +253,7 @@ header {
     //aankondiging contactform
     background: $green;
     padding: 25px;
+    margin-top: 80px;
     p {
       font-size: $fontsize-basic +10;
       font-weight: bold;
@@ -245,12 +265,20 @@ header {
       font-size: $fontsize-basic +50;
     }
   }
+  a {
+    color: #ffffff;
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
   .form {
     background: $green;
     padding: 25px;
+    overflow: hidden;
     label {
       min-width: 25%;
-      line-height: 50px;
+      line-height: 40px;
     }
     input[type='text'] {
       width: 75%;
@@ -262,14 +290,21 @@ header {
     input[type='email'] {
       @extend input[type='text'];
     }
+    .form-textarea-wrapper {
+      @extend input[type='text'];
+      padding: 0px;
+      margin: 0 0 15px;
+    }
     textarea {
       @extend input[type='text'];
+      width: 100%;
     }
     input[type="submit"] {
       background: $yellow;
       border: none;
       padding: 5px 15px;
       float: right;
+      clear: both;
     }
     .resizable-textarea .grippie {
       display: none;
@@ -373,6 +408,7 @@ footer {
   .yellow-canvas {
     max-width: 90%;
     .mention {
+      margin-top: 0px;
       .arrow-right {
         display: none;
       }
@@ -392,6 +428,12 @@ footer {
       }
       input[type="submit"] {
         margin-left: 0;
+      }
+      .form-textarea-wrapper {
+        float: none;
+        padding: 0px;
+        margin: 0 0 15px;
+        width: 100%;
       }
     }
   }
