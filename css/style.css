@@ -307,15 +307,70 @@ footer .phone-mobile {
 */
 @media only screen and (max-width: 1366px) {
   /* css code voor tablets in landscape mode
-  De 1366px op aanraden van Koen (was 1024)*/ }
+  De 1366px op aanraden van Koen (was 1024)*/
+  .green-canvas {
+    max-width: 90%; }
+
+  .yellow-canvas {
+    max-width: 90%; } }
+@media (max-width: 991px) {
+  .navbar-header {
+    float: none; }
+
+  .navbar-toggle {
+    display: block; }
+
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+
+  .navbar-collapse.collapse {
+    display: none !important; }
+
+  .navbar-nav, .navbar-default .navbar-right {
+    float: none !important;
+    margin: 7.5px -15px; }
+
+  .navbar-nav > li, .navbar-default .navbar-right > li {
+    float: none; }
+
+  .navbar-nav > li > a, .navbar-default .navbar-right > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  .navbar-text {
+    float: none;
+    margin: 15px 0; }
+
+  /* bij versie 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block !important; }
+
+  .collapsing {
+    overflow: hidden !important; } }
 @media only screen and (max-width: 960px) {
-  /* css code voor tablets in portrait mode */ }
+  /* css code voor tablets in portrait mode */
+  header .acties {
+    margin-left: 85%; } }
 @media only screen and (max-width: 767px) {
-  /* css code voor smartphones in landscape mode */ }
+  /* css code voor smartphones in landscape mode */
+  header {
+    background: none; }
+    header .experience {
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      margin-left: 0px; }
+    header .acties {
+      margin-left: 80%; }
+    header .site-name {
+      padding: 18px 0 18px 125px;
+      font-size: 28px; } }
 @media only screen and (max-width: 479px) {
   /* css code voor smartphones in portrait mode */
   header {
-    background: none;
     min-height: 200px; }
     header .experience {
       -moz-transform: scale(0.6);

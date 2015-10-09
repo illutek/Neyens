@@ -21,6 +21,7 @@
                 <li><a href="#realisaties">Realisaties <i class="fa fa-picture-o"></i></a></li>
                 <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
                 <li><a href="#acties">Actie <i class="fa fa-info"></i></a></li>
+                <?php include 'dashboard.inc.php'; ?>
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>

@@ -15,6 +15,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php print $front_page; ?>">Home <i class="fa fa-home"></i></a></li>
+                <?php include 'dashboard.inc.php'; ?>
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
