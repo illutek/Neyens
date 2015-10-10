@@ -69,7 +69,7 @@ De indentieke delen op de page en front--page vervangen door inc.php onderdelen
 - footer.inc.php - header.inc.php - fullscreen_bg.inc.php (de video background)
 ```<?php include 'footer.inc.php'; ?> ```
 
-##Path naar images en video 
+##Path naar images en video
 
 Maakt het leesbaarder op tpl.php niveau
 ```
@@ -80,7 +80,8 @@ function neyensbootstrap_preprocess_page(&$vars) {
     $vars['images_path'] = $vars['base_path'] . $vars['directory'] . '/images';
     $vars['video_path'] = $vars['base_path'] . $vars['directory'] . '/video';
 }
-
+```
+**dit op tpl.php**
+```
 <img src="<?php print $images_path; ?>/twentyfive_year_active-stroke-200-min.png">
-
 ```
