@@ -42,7 +42,7 @@ BE 0705.544.643
             <!-- end address -->
 
             <div class="col-sm-6 footer-right">
-                <img src="<?php print base_path() . path_to_theme(); ?>/images/logo_small.jpg" alt="Neyens oud logo">
+                <img src="<?php print $images_path; ?>/logo_small.jpg" alt="Neyens oud logo">
                 <?php print '<a href="' . url('user') . '">' . 'Neyens | &copy; 2015' . '</a>'; ?>
 </div>
 </div>
