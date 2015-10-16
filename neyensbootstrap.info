@@ -14,6 +14,7 @@ scripts[]   =   js/jquery.smooth-scroll.js
 scripts[]   =   js/functions.js
 scripts[]   =   js/sticky.js
 scripts[]   =   js/collapse.js
+scripts[]   =   js/masonry.pkgd.min.js
 
 ;REGIONS
 regions[content]    = Content

@@ -1,5 +1,5 @@
 <!-- include fullscreen video background fullscreen_bg.inc.php -->
-<?php include 'fullscreen_bg.inc.php'; ?>
+<?php include 'includes/fullscreen_bg.inc.php'; ?>
 
 <!-- navigatie fixed top -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php print $front_page; ?>">Home <i class="fa fa-home"></i></a></li>
-                <?php include 'dashboard.inc.php'; ?>
+                <?php include 'includes/dashboard.inc.php'; ?>
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
@@ -26,7 +26,7 @@
 </nav>
 <div id="home"></div>
 <!-- de header region include header.inc.php -->
-<?php include 'header.inc.php'; ?>
+<?php include 'includes/header.inc.php'; ?>
 
 <section class="center">
     <div class="main-wrap-top">
@@ -75,4 +75,4 @@
 
 <!-- de footer region include footer.inc.php -->
 
-<?php include 'footer.inc.php'; ?>
+<?php include 'includes/footer.inc.php'; ?>

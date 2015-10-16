@@ -19,7 +19,7 @@ function neyensbootstrap_preprocess_html(&$variables) {
 /**
  * Impelements hook_preprocess_page().
  */
-function neyensbootstrap_preprocess_page(&$vars) {
-    $vars['images_path'] = $vars['base_path'] . $vars['directory'] . '/images';
-    $vars['video_path'] = $vars['base_path'] . $vars['directory'] . '/video';
+function neyensbootstrap_preprocess_page(&$variables) {
+    $variables['images_path'] = $variables['base_path'] . $variables['directory'] . '/images/';
+    $variables['video_path'] = $variables['base_path'] . $variables['directory'] . '/video/';
 }

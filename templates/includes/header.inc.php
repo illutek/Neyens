@@ -11,7 +11,7 @@
     <div class="row">
         <div class="experience">
             <a href="#home">
-                <figure><img src="<?php print $images_path; ?>/twentyfive_year_active-stroke-200-min.png"></figure>
+                <figure><img src="<?php print $images_path; ?>twentyfive_year_active-stroke-200-min.png"></figure>
             </a>
         </div>
         <div id="sticky-anchor"></div>

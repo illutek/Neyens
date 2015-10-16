@@ -146,6 +146,9 @@ a {
       background-color: #61a534; }
   .navbar-default .navbar-nav li a, .navbar-default .navbar-right li a {
     color: #f1db00; }
+    .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-right li a:hover {
+      color: #33571B;
+      text-shadow: none; }
   .navbar-default .navbar-right {
     border: solid 1px #f1db00; }
 
@@ -268,12 +271,18 @@ header {
       width: 100%; }
     .yellow-canvas .form input[type="submit"] {
       background: #f1db00;
+      color: #33571B;
       border: none;
       padding: 5px 15px;
       float: right;
       clear: both; }
+      .yellow-canvas .form input[type="submit"]:hover {
+        color: #61a534; }
     .yellow-canvas .form .resizable-textarea .grippie {
       display: none; }
+
+.main-wrap-acties .darkgreen {
+  color: #33571B; }
 
 footer .footer-wrap .footer-canvas .address {
   font-size: 20px; }
@@ -301,6 +310,24 @@ footer .phone-mobile {
     footer .phone-mobile .btn-info:hover {
       color: #ffffff;
       background: #f1db00; }
+
+/*
+* Masonry
+=========================================*/
+#realisaties h2.title_realizations {
+  margin: 0 0 30px 30px; }
+#realisaties .green-canvas {
+  overflow: hidden; }
+
+.grid {
+  overflow: hidden; }
+  .grid .grid-item {
+    width: 195px;
+    float: left;
+    margin-right: 0px; }
+  .grid .grid-item--width2 {
+    width: 390px;
+    padding-bottom: 7px; }
 
 /*
 *media query's

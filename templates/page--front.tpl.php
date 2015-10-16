@@ -1,5 +1,5 @@
 <!-- include fullscreen video background fullscreen_bg.inc.php -->
-<?php include 'fullscreen_bg.inc.php'; ?>
+<?php include 'includes/fullscreen_bg.inc.php'; ?>
 
 <!-- navigatie fixed top -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -21,7 +21,7 @@
                 <li><a href="#realisaties">Realisaties <i class="fa fa-picture-o"></i></a></li>
                 <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
                 <li><a href="#acties">Actie <i class="fa fa-info"></i></a></li>
-                <?php include 'dashboard.inc.php'; ?>
+                <?php include 'includes/dashboard.inc.php'; ?>
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
                 <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
@@ -32,7 +32,7 @@
 </nav>
 <div id="home"></div>
 <!-- de header region include header.inc.php -->
-<?php include 'header.inc.php'; ?>
+<?php include 'includes/header.inc.php'; ?>
 
 <!-- regions welkom plaats voor de welkom tekst - inhoudstype 'article' (core)
  + node--article.tpl.php -->
@@ -76,9 +76,7 @@
     <div class="main-wrap">
         <div class="green-canvas">
             <article class="col-md-12 content">
-                <h2>Realisatie</h2>
-
-                <div class="img_realisaties"></div>
+                <?php print render($page['realisaties']); ?>
             </article>
         </div>
     </div>
@@ -114,4 +112,5 @@
 </section>
 <!-- de footer region include footer.inc.php -->
 
-<?php include 'footer.inc.php'; ?>
+<?php include 'includes/footer.inc.php'; ?>
+

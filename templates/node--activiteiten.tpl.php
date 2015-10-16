@@ -80,18 +80,21 @@
  * @ingroup themeable
  */
 ?>
+<?php if ($field_activiteit_img): ?>
 <figure class="col-md-4 image-wrap"><?php print render($content['field_activiteit_img']); ?></figure>
 <article class="col-md-8 content">
-    <span>
-        <?php print render($title_prefix); ?>
-        <?php if (!$page): ?>
-            <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+    <?php else: ?>
+    <article class="col-md-12 content">
         <?php endif; ?>
-        <?php print render($title_suffix); ?>
+        <span>
+        <?php print render($title_prefix); ?>
+            <?php if (!$page): ?>
+                <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+            <?php endif; ?>
+            <?php print render($title_suffix); ?>
 
-        <div class="content"<?php print $content_attributes; ?>>
-            <?php print render($content['body']); ?>
-        </div>
+            <div class="content"<?php print $content_attributes; ?>>
+                <?php print render($content['body']); ?>
+            </div>
     </span>
-
-</article>
+    </article>

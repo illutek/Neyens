@@ -6,6 +6,7 @@
 
 $yellow: #f1db00;
 $green: #61a534;
+$darkgreen: #33571B;
 $grey: #eaeadf;
 $margin-b: 10px;
 $field_width: 100%;
@@ -145,6 +146,10 @@ a {
     li {
       a {
         color: $yellow;
+        &:hover {
+          color: $darkgreen;
+          text-shadow: none;
+        }
       }
     }
   }
@@ -301,14 +306,24 @@ header {
     }
     input[type="submit"] {
       background: $yellow;
+      color: $darkgreen;
       border: none;
       padding: 5px 15px;
       float: right;
       clear: both;
+      &:hover {
+        color: $green;
+      }
     }
     .resizable-textarea .grippie {
       display: none;
     }
+  }
+}
+
+.main-wrap-acties {
+  .darkgreen {
+    color: $darkgreen;
   }
 }
 
@@ -355,6 +370,31 @@ footer {
     }
   }
 }
+
+/*
+* Masonry
+=========================================*/
+#realisaties {
+  h2.title_realizations {
+    margin: 0 0 30px 30px;
+  }
+  .green-canvas {
+    overflow: hidden;
+  }
+}
+.grid {
+  overflow: hidden;
+  .grid-item {
+    width: 195px;
+    float: left;
+    margin-right: 0px;
+  }
+  .grid-item--width2 {
+    width:390px;
+    padding-bottom: 7px;
+  }
+}
+
 
 /*
 *media query's

@@ -82,9 +82,9 @@
 ?>
 <?php if ($field_actie_img): ?>
 <figure class="col-md-4 image-wrap"><?php print render($content['field_actie_img']); ?></figure>
-<article class="col-md-8 content">
+<article class="col-md-8 content darkgreen">
     <?php else: ?>
-    <article class="col-md-12 content">
+    <article class="col-md-12 content darkgreen">
         <?php endif; ?>
         <span>
         <?php print render($title_prefix); ?>
@@ -93,7 +93,7 @@
             <?php endif; ?>
             <?php print render($title_suffix); ?>
 
-            <div class="content"<?php print $content_attributes; ?>>
+            <div class="content">
                 <?php print render($content['body']); ?>
             </div>
     </span>
