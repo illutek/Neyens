@@ -6,6 +6,7 @@
  * Time: 19:33
  */
 ?>
+
 <header class="container">
     <div class="row">
         <div class="experience">
@@ -18,5 +19,10 @@
         <div class="site-name">
             <?php print $site_name; ?>
         </div>
+    </div>
+    <div class="actie-wrap">
+        <a href="#acties">
+            <div class="acties"></div>
+        </a>
     </div>
 </header>

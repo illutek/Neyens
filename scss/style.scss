@@ -47,6 +47,11 @@ h3 {
   font-size: $fontsize-basic +10;
 }
 
+h4 {
+  @extend h1;
+  font-size: $fontsize-basic +6;
+}
+
 a {
   color: $yellow;
   &:hover {
@@ -374,7 +379,7 @@ footer {
 /*
 * Masonry
 =========================================*/
-#realisaties {
+.realisaties {
   h2.title_realizations {
     margin: 0 0 30px 30px;
   }
@@ -392,6 +397,17 @@ footer {
   .grid-item--width2 {
     width:390px;
     padding-bottom: 7px;
+  }
+}
+
+/*
+* Profile page
+======================================*/
+.profile {
+  ul {
+    &.user_linken {
+      margin-left: 50px;
+    }
   }
 }
 

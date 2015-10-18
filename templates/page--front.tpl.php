@@ -32,7 +32,7 @@
 </nav>
 <div id="home"></div>
 <!-- de header region include header.inc.php -->
-<?php include 'includes/header.inc.php'; ?>
+<?php include 'includes/header-front.inc.php'; ?>
 
 <!-- regions welkom plaats voor de welkom tekst - inhoudstype 'article' (core)
  + node--article.tpl.php -->
@@ -45,7 +45,8 @@
 </section>
 <!-- regions prive plaats voor de prive tekst - inhoudstype 'activiteiten' (filter op field_soort_activiteit)
  + node--activiteit.tpl.php -->
-<section class="center" id="prive-tuinen">
+<div id="prive-tuinen" class="anchor"></div>
+<section class="center">
     <div class="main-wrap">
         <div class="row green-canvas">
             <?php print render($page['prive']); ?>
@@ -54,7 +55,8 @@
 </section>
 <!-- regions bedrijven plaats voor de bedrijven tekst - inhoudstype 'activiteiten' (filter op field_soort_activiteit)
  + node--activiteit.tpl.php -->
-<section class="center" id="bedrijven">
+<div id="bedrijven" class="anchor"></div>
+<section class="center">
     <div class="main-wrap">
         <div class="row green-canvas">
             <?php print render($page['bedrijf']); ?>
@@ -64,15 +66,17 @@
 </section>
 <!-- regions steden plaats voor de steden tekst - inhoudstype 'activiteiten' (filter op field_soort_activiteit)
  + node--activiteit.tpl.php -->
-<section class="center" id="steden">
+<div id="steden" class="anchor"></div>
+<section class="center">
     <div class="main-wrap">
         <div class="row green-canvas">
             <?php print render($page['steden']); ?>
         </div>
     </div>
 </section>
-<!-- -->
-<section class="center" id="realisaties">
+<!-- realisaties -->
+<div id="realisaties" class="anchor"></div>
+<section class="center realisaties">
     <div class="main-wrap">
         <div class="green-canvas">
             <article class="col-md-12 content">
@@ -82,7 +86,8 @@
     </div>
 </section>
 <!-- contact formulier enkel in de rechter col-md-6 -->
-<section class="center" id="contact">
+<div id="contact" class="anchor"></div>
+<section class="center">
     <div class="main-wrap">
         <div class="row yellow-canvas">
             <div class="col-md-5 mention">
@@ -103,7 +108,8 @@
     </div>
 </section>
 <!-- acties er wordt altijd een actie getoond daarom ook geen controle -->
-<section class="center" id="acties">
+<div id="acties" class="anchor"></div>
+<section class="center">
     <div class="main-wrap-acties">
         <div class="row yellow-canvas">
             <?php print render($page['actions']); ?>

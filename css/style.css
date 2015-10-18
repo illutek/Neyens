@@ -4,7 +4,7 @@
 */
 @import url(http://fonts.googleapis.com/css?family=Boogaloo);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-html, body, div, span, applet, object, iframe, h1, h2, h3, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -76,10 +76,10 @@ body {
 p {
   margin-bottom: 15px; }
 
-h1, h2, h3, h2, h3, h4 {
+h1, h2, h3, h4, h2, h3, h4 {
   padding-bottom: 12px; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   padding: 12px 0 20px;
   font-size: 30px; }
 
@@ -88,6 +88,9 @@ h2 {
 
 h3 {
   font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
 
 a {
   color: #f1db00; }
@@ -98,9 +101,9 @@ a {
 .margin-bottom {
   margin-bottom: 10px; }
 
-#auth_box #top_part h1#the_logo img, #auth_box #top_part h2#the_logo img, #auth_box #top_part h3#the_logo img {
+#auth_box #top_part h1#the_logo img, #auth_box #top_part h2#the_logo img, #auth_box #top_part h3#the_logo img, #auth_box #top_part h4#the_logo img {
   max-width: 100%; }
-#auth_box #top_part h1#the_logo a, #auth_box #top_part h2#the_logo a, #auth_box #top_part h3#the_logo a {
+#auth_box #top_part h1#the_logo a, #auth_box #top_part h2#the_logo a, #auth_box #top_part h3#the_logo a, #auth_box #top_part h4#the_logo a {
   color: #f1db00; }
 #auth_box #bottom_part .password_link a, #auth_box #bottom_part .back_link a {
   color: #f1db00; }
@@ -314,9 +317,9 @@ footer .phone-mobile {
 /*
 * Masonry
 =========================================*/
-#realisaties h2.title_realizations {
+.realisaties h2.title_realizations {
   margin: 0 0 30px 30px; }
-#realisaties .green-canvas {
+.realisaties .green-canvas {
   overflow: hidden; }
 
 .grid {
@@ -328,6 +331,12 @@ footer .phone-mobile {
   .grid .grid-item--width2 {
     width: 390px;
     padding-bottom: 7px; }
+
+/*
+* Profile page
+======================================*/
+.profile ul.user_linken {
+  margin-left: 50px; }
 
 /*
 *media query's

@@ -17,14 +17,10 @@
                 <li><a href="<?php print $front_page; ?>">Home <i class="fa fa-home"></i></a></li>
                 <?php include 'includes/dashboard.inc.php'; ?>
             </ul>
-            <!-- <ul class="nav navbar-nav navbar-right">
-                <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
-            </ul> -->
-
         </div>
     </div>
 </nav>
-<div id="home"></div>
+
 <!-- de header region include header.inc.php -->
 <?php include 'includes/header.inc.php'; ?>
 
@@ -68,11 +64,8 @@
                             <!-- /.section, /#content -->
                 </span>
             </article>
-
         </div>
     </div>
 </section>
-
 <!-- de footer region include footer.inc.php -->
-
 <?php include 'includes/footer.inc.php'; ?>
