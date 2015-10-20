@@ -80,8 +80,8 @@ h1, h2, h3, h4, h2, h3, h4 {
   padding-bottom: 12px; }
 
 h1, h2, h3, h4 {
-  padding: 12px 0 20px;
-  font-size: 30px; }
+  font-size: 30px;
+  line-height: 1.3em; }
 
 h2 {
   font-size: 26px; }
@@ -318,7 +318,7 @@ footer .phone-mobile {
 * Masonry
 =========================================*/
 .realisaties h2.title_realizations {
-  margin: 0 0 30px 30px; }
+  margin-bottom: 30px; }
 .realisaties .green-canvas {
   overflow: hidden; }
 
@@ -337,6 +337,23 @@ footer .phone-mobile {
 ======================================*/
 .profile ul.user_linken {
   margin-left: 50px; }
+
+/*
+* tabs
+========================================*/
+ul.primary {
+  min-height: 30px; }
+  ul.primary li.active a {
+    background-color: green;
+    padding: 9px; }
+    ul.primary li.active a:hover {
+      background-color: black;
+      color: #f1db00; }
+  ul.primary li a {
+    background-color: black;
+    padding: 9px; }
+    ul.primary li a:hover {
+      background-color: #0f0f0f; }
 
 /*
 *media query's

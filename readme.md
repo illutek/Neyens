@@ -92,3 +92,8 @@ Dit zonder modules, een inhoudstype realisaties, een simpele view volledige inho
 Een node--realisaties.tpl.php met de nodige div's en een extra file field--field_realisatie_img.tpl.php
 om de class 'grid-item' rond de image te plaatsen, voor een meer gedetailleerde uitleg
 https://www.dropbox.com/s/dri1mdwjjze87wh/Masonry_Drupal_zonder_module.pdf?dl=0
+
+##Collapse menu
+Het menu op de page--front.tpl.php in tablet mode klapt niet dicht na een menu keuze
+omdat het menu item naar een ankerpunt refereerd op dezelfde pagina, het js file
+collapse.js lost dit op.
