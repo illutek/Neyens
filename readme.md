@@ -97,3 +97,15 @@ https://www.dropbox.com/s/dri1mdwjjze87wh/Masonry_Drupal_zonder_module.pdf?dl=0
 Het menu op de page--front.tpl.php in tablet mode klapt niet dicht na een menu keuze
 omdat het menu item naar een ankerpunt refereerd op dezelfde pagina, het js file
 collapse.js lost dit op.
+
+##Aanroepen jquery.smooth-scroll.js
+Om dit enkel op de home pagina te include.
+```
+    if (drupal_is_front_page()) {
+        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/jquery.smooth-scroll.js', array('weight' => 2));
+    }
+```
+Volgende om ervoor te zorgen dat dit gebeurt na het include van jquery.min.js geven we een wieght mee
+```
+array('weight' => 2)
+```
