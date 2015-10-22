@@ -33,3 +33,18 @@ function neyensbootstrap_preprocess_page(&$variables)
         drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/jquery.smooth-scroll.js', array('weight' => 2));
     }
 }
+
+/**
+ * Implements viewport to html.tpl.php
+ * <meta name=“viewport” content=“width=device-width, initial-scale=1, maximum-scale=1”/> $page
+ */
+function neyensbootstrap_page_alter($page) {
+    $viewport = array(
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => array(
+            'name' => 'viewport',
+            'content' => 'width=device-width, initial-scale=1, maximum-scale=1')
+    );
+    drupal_add_html_head($viewport, 'viewport');
+}

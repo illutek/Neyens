@@ -38,17 +38,14 @@ h1 {
 }
 
 h2 {
-  @extend h1;
   font-size: $fontsize-basic +14;
 }
 
 h3 {
-  @extend h1;
   font-size: $fontsize-basic +10;
 }
 
 h4 {
-  @extend h1;
   font-size: $fontsize-basic +6;
 }
 
@@ -502,6 +499,18 @@ ul {
       margin-left: 85%;
     }
   }
+  .yellow-canvas {
+    max-width: 90%;
+    .mention {
+      margin-top: 0px;
+      .arrow-right {
+        display: none;
+      }
+      .arrow-down {
+        display: block;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -524,6 +533,22 @@ ul {
 
 @media only screen and (max-width: 479px) {
   /* css code voor smartphones in portrait mode */
+
+  h1 {
+    font-size: $fontsize-basic +15;
+  }
+
+  h2 {
+    font-size: $fontsize-basic +11;
+  }
+
+  h3 {
+    font-size: $fontsize-basic +7;
+  }
+
+  h4 {
+    font-size: $fontsize-basic +3;
+  }
 
   header {
     min-height: 200px;
@@ -551,16 +576,6 @@ ul {
     max-width: 90%;
   }
   .yellow-canvas {
-    max-width: 90%;
-    .mention {
-      margin-top: 0px;
-      .arrow-right {
-        display: none;
-      }
-      .arrow-down {
-        display: block;
-      }
-    }
     .form {
       input[type="text"] {
         width: $field_width;
