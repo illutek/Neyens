@@ -23,14 +23,10 @@
                 <li><a href="#acties">Actie <i class="fa fa-info"></i></a></li>
                 <?php include 'includes/dashboard.inc.php'; ?>
             </ul>
-            <!-- <ul class="nav navbar-nav navbar-right">
-                <li><a href="#acties">Acties <i class="fa fa-info"></i></a></li>
-            </ul> -->
-
         </div>
     </div>
 </nav>
-<div id="home"></div>
+<div id="home"><!-- anker home --></div>
 <!-- de header region include header.inc.php -->
 <?php include 'includes/header-front.inc.php'; ?>
 
@@ -91,8 +87,9 @@
     <div class="main-wrap">
         <div class="row yellow-canvas">
             <div class="col-md-5 mention">
-                <p>Contacteer ons via dit formulier voor al je vragen of voor een offerte</p>
-
+                <div class="mention-text">
+                    <?php print render($page['content_contactform']); ?>
+                </div>
                 <div class="arrow-right">
                     <i class="fa fa-arrow-right arrow"></i>
                 </div>
@@ -111,12 +108,13 @@
 <div id="acties" class="anchor"></div>
 <section class="center">
     <div class="main-wrap-acties">
-        <div class="row yellow-canvas">
+        <div class="yellow-canvas">
             <?php print render($page['actions']); ?>
         </div>
     </div>
 </section>
 <!-- de footer region include footer.inc.php -->
-
 <?php include 'includes/footer.inc.php'; ?>
+
+<a href="#0" class="cd-top">Top</a>
 
