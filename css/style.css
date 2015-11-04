@@ -69,7 +69,7 @@ body {
   background: #bfc773;
   height: 100%;
   width: 100%; }
-  body.page-user-login {
+  body.page-user-login, body.page-user-password {
     background: url("../video/jasmine_flower_127/snapshot-min.PNG") no-repeat center center fixed;
     background-size: cover; }
 
@@ -100,13 +100,6 @@ a {
 
 .margin-bottom {
   margin-bottom: 10px; }
-
-#auth_box #top_part h1#the_logo img {
-  max-width: 100%; }
-#auth_box #top_part h1#the_logo a {
-  color: #f1db00; }
-#auth_box #bottom_part .password_link a, #auth_box #bottom_part .back_link a {
-  color: #f1db00; }
 
 .fullscreen-bg {
   position: fixed;
@@ -242,9 +235,10 @@ header {
     background: #61a534;
     padding: 25px;
     margin-top: 80px; }
-    .yellow-canvas .mention p {
+    .yellow-canvas .mention .mention-text {
       font-size: 22px;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-bottom: 35px; }
     .yellow-canvas .mention .arrow-down {
       display: none; }
     .yellow-canvas .mention .arrow {
@@ -258,6 +252,8 @@ header {
     background: #61a534;
     padding: 25px;
     overflow: hidden; }
+    .yellow-canvas .form .webform-component {
+      display: flex; }
     .yellow-canvas .form label {
       min-width: 25%;
       line-height: 40px; }
@@ -284,19 +280,26 @@ header {
     .yellow-canvas .form .resizable-textarea .grippie {
       display: none; }
 
-.main-wrap-acties .darkgreen {
-  color: #33571B; }
+/*
+* acties
+==========================================*/
+.main-wrap-acties {
+  margin: 100px 0; }
+  .main-wrap-acties .darkgreen {
+    color: #33571B; }
 
-footer .footer-wrap .footer-canvas .address {
-  font-size: 20px; }
-  footer .footer-wrap .footer-canvas .address .mail a {
+footer .footer-wrap {
+  margin-bottom: 100px; }
+  footer .footer-wrap .footer-canvas .address {
+    font-size: 20px; }
+    footer .footer-wrap .footer-canvas .address .mail a {
+      color: #ffffff; }
+      footer .footer-wrap .footer-canvas .address .mail a:hover {
+        color: #f1db00;
+        text-decoration: none; }
+  footer .footer-wrap .footer-right a {
+    text-decoration: none;
     color: #ffffff; }
-    footer .footer-wrap .footer-canvas .address .mail a:hover {
-      color: #f1db00;
-      text-decoration: none; }
-footer .footer-wrap .footer-right a {
-  text-decoration: none;
-  color: #ffffff; }
 footer .phone-mobile {
   display: none;
   margin: 15px 0; }
@@ -315,7 +318,9 @@ footer .phone-mobile {
       background: #f1db00; }
 
 /*
-* Masonry
+* Masonry js deze is uitgeschakeld heeft helemaal
+* geen nut op deze site en gaf ook problemen
+* foto's werden some over elkaar getoond.
 =========================================*/
 .realisaties h2.title_realizations {
   margin-bottom: 30px; }
@@ -331,6 +336,42 @@ footer .phone-mobile {
   .grid .grid-item--width2 {
     width: 390px;
     padding-bottom: 7px; }
+
+/*
+*To top
+========================================*/
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(97, 165, 52, 0.8) url("../images/cd-top-arrow.svg") no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s; }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s; }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1; }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5; }
+  .no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1; }
 
 /*
 * Profile page
@@ -354,6 +395,45 @@ ul.primary {
     padding: 9px; }
     ul.primary li a:hover {
       background-color: #0f0f0f; }
+
+#auth_box {
+  background: #61a534;
+  width: 600px;
+  margin-top: 50px; }
+  #auth_box h2.title {
+    color: #ffffff; }
+  #auth_box #top_part {
+    border-bottom: solid 1px #f1db00; }
+    #auth_box #top_part h1#the_logo {
+      padding: 0 0 50px; }
+      #auth_box #top_part h1#the_logo img {
+        max-width: 100%; }
+      #auth_box #top_part h1#the_logo a {
+        color: #f1db00; }
+  #auth_box #middle_part {
+    background: #61a534;
+    padding: 25px;
+    box-shadow: none;
+    width: 310px;
+    margin: auto; }
+    #auth_box #middle_part form label {
+      width: 150px;
+      color: #ffffff; }
+    #auth_box #middle_part form input[type="text"], #auth_box #middle_part form input[type="password"] {
+      border: solid 1px #61a534;
+      border-radius: 0px; }
+    #auth_box #middle_part form input[type="submit"] {
+      background: #f1db00;
+      color: #33571B;
+      border: none;
+      padding: 5px 15px; }
+      #auth_box #middle_part form input[type="submit"]:hover {
+        color: #61a534; }
+  #auth_box #bottom_part {
+    padding: 25px;
+    border-top: solid 1px #f1db00; }
+    #auth_box #bottom_part .password_link a, #auth_box #bottom_part .back_link a {
+      color: #f1db00; }
 
 /*
 *media query's
@@ -471,7 +551,7 @@ ul.primary {
   .green-canvas {
     max-width: 90%; }
 
-  .yellow-canvas .form input[type="text"] {
+  .yellow-canvas .form input[type="text"], .yellow-canvas .form #auth_box #middle_part form input[type="password"], #auth_box #middle_part form .yellow-canvas .form input[type="password"] {
     width: 100%; }
   .yellow-canvas .form input[type="email"] {
     width: 100%; }
@@ -490,6 +570,9 @@ ul.primary {
 
   .center .main-wrap, .center .main-wrap-top {
     margin-top: 25px; }
+
+  .grid .grid-item, .grid .grid-item--width2 {
+    width: 100%; }
 
   footer .phone-mobile {
     display: block; }
