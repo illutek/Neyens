@@ -87,11 +87,13 @@ function neyensbootstrap_preprocess_page(&$vars) {
 ```
 
 ##Masonry
-#### Realisaties
+### Realisaties (uitgeschakeld afbeeldingen liggen soms over elkaar zonder enige verklaring)
+#### Had hier ook weinig zin omdat de thumbnails alle dezelfde hoogte hebben.
 Dit zonder modules, een inhoudstype realisaties, een simpele view volledige inhoud tonen.
 Een node--realisaties.tpl.php met de nodige div's en een extra file field--field_realisatie_img.tpl.php
 om de class 'grid-item' rond de image te plaatsen, voor een meer gedetailleerde uitleg
 https://www.dropbox.com/s/dri1mdwjjze87wh/Masonry_Drupal_zonder_module.pdf?dl=0
+
 
 ##Collapse menu
 Het menu op de page--front.tpl.php in tablet mode klapt niet dicht na een menu keuze
@@ -109,3 +111,37 @@ Volgende om ervoor te zorgen dat dit gebeurt na het include van jquery.min.js ge
 ```
 array('weight' => 2)
 ```
+
+##Vieuwport
+Ingesteld op template.php, op deze manier blijft html.php weer een stuk cleaner.
+```
+/**
+ * Implements viewport to html.tpl.php
+ * <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
+ */
+function neyensbootstrap_page_alter($page) {
+    $viewport = array(
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => array(
+            'name' => 'viewport',
+            'content' => 'width=device-width, initial-scale=1, maximum-scale=1')
+    );
+    drupal_add_html_head($viewport, 'viewport');
+}
+```
+
+##Custom js files
+JavaScript closures toegevoegd bv
+```
+function($) {
+	$('a[href*=#]:not([href=#])').click(function() {.....
+```
+wordt dan
+```
+jQuery(document).ready(function($) {
+	$('a[href*=#]:not([href=#])').click(function() {......
+```
+https://www.drupal.org/node/171213
+
+
