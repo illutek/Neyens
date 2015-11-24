@@ -155,6 +155,6 @@ jQuery(document).ready(function($) {
 https://www.drupal.org/node/171213
 
 ###Alle bootstrap files extern (versie 3.3.6)
-De versie 3.3.4 op domein lates zitten om eventueel terug te kunnen vallen (.info file uit comment halen)
+De versie 3.3.4 op domein laten zitten om eventueel terug te kunnen vallen (.info file uit comment halen)
 
 
