@@ -391,6 +391,9 @@ footer {
     width: 390px;
     padding-bottom: 7px;
   }
+  .img-over-effect:hover {
+    @include opacity-decimal(0.8);
+  }
 }
 
 /*

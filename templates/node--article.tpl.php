@@ -81,7 +81,9 @@
  */
 ?>
 <?php if ($field_image): ?>
-<figure class="col-md-4 image-wrap"><?php print render($content['field_image']); ?></figure>
+<figure class="col-md-4 image-wrap">
+    <?php print render($content['field_image']); ?>
+</figure>
 <article class="col-md-8 content">
     <?php else: ?>
     <article class="col-md-12 content">

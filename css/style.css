@@ -336,6 +336,11 @@ footer .phone-mobile {
   .grid .grid-item--width2 {
     width: 390px;
     padding-bottom: 7px; }
+  .grid .img-over-effect:hover {
+    filter: alpha(opacity=80);
+    -ms-filter: "alpha(opacity=80)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8; }
 
 /*
 *To top

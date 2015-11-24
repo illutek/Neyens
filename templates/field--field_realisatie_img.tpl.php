@@ -10,7 +10,7 @@
 
 $total = count($items);
 for ($i = 1; $i < $total; ++$i): ?>
-<div class="grid-item">
+<div class="grid-item img-over-effect">
     <?php print render($items[$i]); ?>
 </div>
 <?php endfor; ?>

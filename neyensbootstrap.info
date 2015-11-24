@@ -10,10 +10,13 @@ stylesheets[all][] = css/style.css
 
 ;JS
 scripts[]   =   js/bootstrap.min.js
+;scripts[]   =   js/sticky.js
+
+;all include on template.php with drupal_add_js
 ;scripts[]   =   js/jquery.smooth-scroll.js
-scripts[]   =   js/sticky.js
-scripts[]   =   js/collapse.js
-scripts[]   =   js/masonry.pkgd.min.js
+;scripts[]   =   js/collapse.js
+;Masonry hier uitgeschakeld niet gebruikt in dit theme
+;scripts[]   =   js/masonry.pkgd.min.js
 
 ;REGIONS
 regions[content]    = Content
@@ -22,5 +25,6 @@ regions[prive]      = Privé
 regions[bedrijf]    = Bedrijf
 regions[steden]     = Steden
 regions[realisaties]= Realisaties
+regions[content_contactform]    = Content contact formulier
 regions[contact]    = Contact
 regions[actions]    = Acties

@@ -55,6 +55,7 @@
                                         unset($page['content']['system_main']['default_message']);
                                     }
                                     ?>
+
                                         <?php print render($page['content']); ?>
 
                                     <?php endif; ?>

@@ -1,4 +1,4 @@
-<!-- include fullscreen video background fullscreen_bg.inc.php -->
+<!-- include fullscreen video background includes/fullscreen_bg.inc.php -->
 <?php include 'includes/fullscreen_bg.inc.php'; ?>
 
 <!-- navigatie fixed top -->
@@ -27,7 +27,7 @@
     </div>
 </nav>
 <div id="home"><!-- anker home --></div>
-<!-- de header region include header.inc.php -->
+<!-- de header region include includes/header.inc.php -->
 <?php include 'includes/header-front.inc.php'; ?>
 
 <!-- regions welkom plaats voor de welkom tekst - inhoudstype 'article' (core)
