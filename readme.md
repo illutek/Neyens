@@ -94,11 +94,16 @@ Een node--realisaties.tpl.php met de nodige div's en een extra file field--field
 om de class 'grid-item' rond de image te plaatsen, voor een meer gedetailleerde uitleg
 https://www.dropbox.com/s/dri1mdwjjze87wh/Masonry_Drupal_zonder_module.pdf?dl=0
 
-
-##Collapse menu
-Het menu op de page--front.tpl.php in tablet mode klapt niet dicht na een menu keuze
-omdat het menu item naar een ankerpunt refereerd op dezelfde pagina, het js file
-collapse.js lost dit op.
+Code 'field--field_realisatie_img.tpl.php'
+```
+<?php
+$total = count($items);
+for ($i = 1; $i < $total; ++$i): ?>
+<div class="grid-item img-over-effect">
+    <?php print render($items[$i]); ?>
+</div>
+<?php endfor; ?>
+```
 
 ##Aanroepen jquery.smooth-scroll.js
 Om dit enkel op de home pagina te include.
@@ -107,10 +112,15 @@ Om dit enkel op de home pagina te include.
         drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/jquery.smooth-scroll.js', array('weight' => 2));
     }
 ```
-Volgende om ervoor te zorgen dat dit gebeurt na het include van jquery.min.js geven we een wieght mee
+Volgende om ervoor te zorgen dat dit gebeurt na het include van jquery.min.js geven we een weight mee
 ```
 array('weight' => 2)
 ```
+
+##Collapse menu
+Het menu op de page--front.tpl.php in tablet mode klapt niet dicht na een menu keuze
+omdat het menu item naar een ankerpunt refereerd op dezelfde pagina, collapse.js lost dit op, wordt eveneens
+enkel op de frontpage opgeroepen via drupal_add_js op template.php.
 
 ##Vieuwport
 Ingesteld op template.php, op deze manier blijft html.php weer een stuk cleaner.
@@ -132,7 +142,7 @@ function neyensbootstrap_page_alter($page) {
 ```
 
 ##Custom js files
-JavaScript closures toegevoegd bv
+JavaScript closures toegevoegd 'jQuery(document).ready'
 ```
 function($) {
 	$('a[href*=#]:not([href=#])').click(function() {.....
@@ -143,5 +153,8 @@ jQuery(document).ready(function($) {
 	$('a[href*=#]:not([href=#])').click(function() {......
 ```
 https://www.drupal.org/node/171213
+
+###Alle bootstrap files extern (versie 3.3.6)
+De versie 3.3.4 op domein lates zitten om eventueel terug te kunnen vallen (.info file uit comment halen)
 
 

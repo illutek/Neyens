@@ -18,6 +18,10 @@ function neyensbootstrap_preprocess_html(&$variables)
     //Add external .js and .css
     drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', 'external', array('weight' => 1));
 
+    drupal_add_js('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', 'external', array('weight' => 2));
+
+    drupal_add_css('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array('type' => 'external'));
+
     drupal_add_css('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array('type' => 'external'));
 
     // Adding viewport to HTML Header.
@@ -40,14 +44,14 @@ function neyensbootstrap_preprocess_page(&$variables)
     $variables['images_path'] = $variables['base_path'] . $variables['directory'] . '/images/';
     $variables['video_path'] = $variables['base_path'] . $variables['directory'] . '/video/';
 
-    drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/collapse.js', array('weight' => 5));
+    drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/collapse.js', array('weight' => 6));
 
     /**
      * jquery.smooth-scroll, sticky and to_top only on the front page
      */
     if (drupal_is_front_page()) {
-        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/jquery.smooth-scroll.js', array('weight' => 2));
-        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/to_top.js', array('weight' => 3));
-        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/sticky.js', array('weight' => 4));
+        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/jquery.smooth-scroll.js', array('weight' => 3));
+        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/to_top.js', array('weight' => 4));
+        drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/sticky.js', array('weight' => 5));
     }
 }

@@ -4,12 +4,12 @@ description = Nieuwe site voor Ronny Neyens periode augustus 2015
 core = 7.x
 
 ;CSS
-stylesheets[all][] = css/bootstrap.min.css
-stylesheets[all][] = css/bootstrap-theme.min.css
+;stylesheets[all][] = css/bootstrap.min.css
+;stylesheets[all][] = css/bootstrap-theme.min.css
 stylesheets[all][] = css/style.css
 
 ;JS
-scripts[]   =   js/bootstrap.min.js
+;scripts[]   =   js/bootstrap.min.js
 ;scripts[]   =   js/sticky.js
 
 ;all include on template.php with drupal_add_js
