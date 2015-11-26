@@ -157,4 +157,7 @@ https://www.drupal.org/node/171213
 ###Alle bootstrap files extern (versie 3.3.6)
 De versie 3.3.4 op domein laten zitten om eventueel terug te kunnen vallen (.info file uit comment halen)
 
+###Meta tags
+Deze toegevoegd op template.php heeft weinig zin op de module te installeren voor enkel 1 pagina, de front page
+
 
