@@ -33,6 +33,41 @@ function neyensbootstrap_preprocess_html(&$variables)
             'content' => 'width=device-width, initial-scale=1, maximum-scale=1')
     );
     drupal_add_html_head($viewport, 'viewport');
+
+    // Adding meta tags description, one page template dus kies hier om deze rechtstreeks
+    // toe te voegen.
+    $description = array (
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => array (
+            'name' => 'description',
+            'content' => 'Neyens tuinaanleg en tuinonderhoud zowel privé, gemeente en
+            bedrijven  ook vijvers en zwembaden als ook verhardingen behoort tot onze
+            activiteiten.')
+    );
+    drupal_add_html_head($description, 'description');
+
+    // Adding meta tags keywords, one page template dus kies hier om deze rechtstreeks
+    // toe te voegen.
+    $keywords = array (
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => array (
+            'name' => 'keywords',
+            'content' => 'tuinaanleg, tuinonderhoud, verhardingen, waterpatijen, vijvers,
+            zwembaden, tuinverlichting, beplanting, gazon, grasperken')
+    );
+    drupal_add_html_head($keywords, 'keywords');
+
+	// Adding google-verification
+	$verification = array (
+		'#type' => 'html_tag',
+		'#tag' => 'meta',
+		'#attributes' => array (
+			'name' => 'google-site-verification',
+			'content' => 'mCYonwLH4UhOZzaxe62Mlfkdndd14YTZZrATgMwdkWM')
+	);
+	drupal_add_html_head($verification, 'google-site-verification');
 }
 
 
