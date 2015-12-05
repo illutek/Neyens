@@ -160,7 +160,7 @@ De versie 3.3.4 op domein laten zitten om eventueel terug te kunnen vallen (.inf
 ###Meta tags
 Deze toegevoegd op template.php heeft weinig zin op de module te installeren voor enkel 1 pagina, de front page
 
-´´´
+```
 function neyensbootstrap_preprocess_html(&$variables)
 {
     // Adding meta tags description, one page template dus kies hier om deze rechtstreeks
@@ -188,7 +188,7 @@ function neyensbootstrap_preprocess_html(&$variables)
         );
         drupal_add_html_head($keywords, 'keywords');
 }
-´´´
+```
 
 
 
