@@ -5,6 +5,11 @@
  * than a function that helps limit the scope of variables so you don't
  * accidentally overwrite global variables.
  * https://www.drupal.org/node/171213
+ *
+ * Volgende $(this).find toevoegen aan regel 19 om ervoor te zorgen dat het click event enkel van
+ * toepassing is op het naviagatie menu, hier in dit geval niet nodig omdat er op deze
+ * pagina geen enkele andere tool gebruik maakt van het click event
+ * $(this).find(".navbar-toggle").trigger( "click" );
  */
 
 jQuery(document).ready(function($) {
