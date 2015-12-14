@@ -68,7 +68,9 @@ function neyensbootstrap_preprocess_page(&$variables)
 {
     $variables['images_path'] = $variables['base_path'] . $variables['directory'] . '/images/';
     $variables['video_path'] = $variables['base_path'] . $variables['directory'] . '/video/';
-
+    /**
+     *
+     */
     drupal_add_js(drupal_get_path('theme', 'neyensbootstrap') . '/js/collapse.js', array('weight' => 6));
 
     /**
