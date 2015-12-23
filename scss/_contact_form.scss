@@ -1,0 +1,78 @@
+//contactform region
+.yellow-canvas {
+  max-width: 60%;
+  color: white;
+  min-height: 300px;
+  padding: 2%;
+  margin: 2% auto;
+  background: $yellow;
+  .mention {
+    //aankondiging contactform
+    background: $green;
+    padding: 25px;
+    margin-top: 80px;
+    .mention-text {
+      font-size: $fontsize-basic +10;
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+    .arrow-down {
+      display: none;
+    }
+    .arrow {
+      font-size: $fontsize-basic +50;
+    }
+  }
+  a {
+    color: #ffffff;
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+  .form {
+    background: $green;
+    padding: 25px;
+    overflow: hidden;
+    .webform-component {
+      display: flex;
+    }
+    label {
+      min-width: 25%;
+      line-height: 40px;
+    }
+    input[type='text'] {
+      width: 75%;
+      float: right;
+      clear: both;
+      padding: 5px;
+      color: $green;
+    }
+    input[type='email'] {
+      @extend input[type='text'];
+    }
+    .form-textarea-wrapper {
+      @extend input[type='text'];
+      padding: 0px;
+      margin: 0 0 15px;
+    }
+    textarea {
+      @extend input[type='text'];
+      width: 100%;
+    }
+    input[type="submit"] {
+      background: $yellow;
+      color: $darkgreen;
+      border: none;
+      padding: 5px 15px;
+      float: right;
+      clear: both;
+      &:hover {
+        color: $green;
+      }
+    }
+    .resizable-textarea .grippie {
+      display: none;
+    }
+  }
+}
