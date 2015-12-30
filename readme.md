@@ -196,8 +196,8 @@ en templates/page--user--reset.tpl.php
 nl volgende verwijdert ```<img src="<?php print $logo; ?>" alt="....">``` dit om de border rond de site-name
 te verwijderen.
 
-###SCSS opgedeeld
-
+###SCSS opgedeeld  
+![SMACSS logo](/images/SMACSS.jpg)  
 In verschillende files SMACSS Scalable and Modular Architecture for CSS  
 * Base: alle basis css zoals reset en globals (vooral de tags zoals header, body, paragraaf, linken  
 * Layout: Vooral de structuur van de site, the look and feel.  
