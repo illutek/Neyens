@@ -193,10 +193,10 @@ function neyensbootstrap_preprocess_html(&$variables)
 ###Better login module
 Een kleine aanpassing in de files templates/page--user--login.tpl.php, templates/page--user--password.tpl.php
 en templates/page--user--reset.tpl.php
-nl volgende verwijdert <img src="<?php print $logo; ?>" alt="...."> dit om de border rond de site-name
+nl volgende verwijdert ```<img src="<?php print $logo; ?>" alt="....">``` dit om de border rond de site-name
 te verwijderen.
 
-### SCSS opgedeeld
+###SCSS opgedeeld
 
 In verschillende files SMACSS Scalable and Modular Architecture for CSS  
 * Base: alle basis css zoals reset en globals (vooral de tags zoals header, body, paragraaf, linken  
@@ -217,8 +217,7 @@ itself would be initially defined in the module and then the theme defines the c
     border-color: blue;
 }
 ```
-https://smacss.com/book/type-theme
-
+https://smacss.com/  
 Lijkt misschien ver gezocht om bij een eenvoudige site dit alles toe te passen, maar toch op deze mannier is het 
 heel simpel om bepaalde onderdelen te hergebruiken voor andere projecten.
 
