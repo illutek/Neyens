@@ -197,7 +197,6 @@ nl volgende verwijdert <img src="<?php print $logo; ?>" alt="...."> dit om de bo
 te verwijderen.
 
 ### SCSS opgedeeld
-![SMACSS logo](/images/SMACSS.jpg)
 
 In verschillende files SMACSS Scalable and Modular Architecture for CSS  
 * Base: alle basis css zoals reset en globals (vooral de tags zoals header, body, paragraaf, linken  
