@@ -190,7 +190,7 @@ function neyensbootstrap_preprocess_html(&$variables)
 }
 ```
 
-###Better login mudule
+###Better login module
 Een kleine aanpassing in de files templates/page--user--login.tpl.php, templates/page--user--password.tpl.php
 en templates/page--user--reset.tpl.php
 nl volgende verwijdert <img src="<?php print $logo; ?>" alt="...."> dit om de border rond de site-name
@@ -198,15 +198,15 @@ te verwijderen.
 
 ### SCSS opgedeeld
 ![SMACSS logo](/images/SMACSS.jpg)
-Format: ![Alt Text](url)
-In verschillende files SMACSS Scalable and Modular Architecture for CSS
-*Base: alle basis css zoals reset en globals (vooral de tags zoals header, body, paragraaf, linken
-*Layout: Vooral de structuur van de site, the look and feel.
-*Components: Hier de to-top button, het betterlogin onderdeel, maar ook de userpagina zou als component kunnen
-*State: De verschillende uitzichten van de site, voor mij is dat de media-query
-*Theme: Niet gebruikt  
+
+In verschillende files SMACSS Scalable and Modular Architecture for CSS  
+* Base: alle basis css zoals reset en globals (vooral de tags zoals header, body, paragraaf, linken  
+* Layout: Vooral de structuur van de site, the look and feel.  
+* Components: Hier de to-top button, het betterlogin onderdeel, maar ook de userpagina zou als component kunnen  
+* State: De verschillende uitzichten van de site, voor mij is dat de media-query  
+* Theme: Niet gebruikt  
 Let’s say you have a dialog module that needs to have a border colour of blue, the border 
-itself would be initially defined in the module and then the theme defines the colour:
+itself would be initially defined in the module and then the theme defines the colour:  
 ```
 // in module-name.css
 .mod {
@@ -221,6 +221,6 @@ itself would be initially defined in the module and then the theme defines the c
 https://smacss.com/book/type-theme
 
 Lijkt misschien ver gezocht om bij een eenvoudige site dit alles toe te passen, maar toch op deze mannier is het 
-heel simpel om bepaalde onderdelen te hergebruiken voor andere projecten
+heel simpel om bepaalde onderdelen te hergebruiken voor andere projecten.
 
 
