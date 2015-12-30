@@ -1,0 +1,37 @@
+// =======================================================================
+// ## ++ Navigation
+// ========================================================================
+
+.navbar-fixed-top {
+  background: $green;
+}
+
+.navbar-default {
+  border-bottom: solid 1px $yellow;
+
+  .navbar-toggle {
+    border-color: $yellow;
+    border-radius: 0px;
+    .icon-bar {
+      background-color: $yellow;
+    }
+    &:hover {
+      background-color: $green;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: $yellow;
+        &:hover {
+          color: $darkgreen;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+  .navbar-right {
+    @extend .navbar-nav;
+    border: solid 1px $yellow;
+  }
+}

@@ -1,0 +1,198 @@
+//==============================================
+//## ++ Media query's
+//==============================================
+
+@import "../_variables";
+@import "../mixin/_basicfonts";
+
+@media only screen and (max-width: 1366px) {
+  /* css code voor tablets in landscape mode
+  De 1366px op aanraden van Koen (was 1024)*/
+  .green-canvas {
+    max-width: 90%;
+  }
+  .yellow-canvas {
+    max-width: 90%;
+  }
+}
+
+// dit om bij sm de nav reeds te collapse
+@media (max-width: 991px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+  /* bij versie 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .collapsing {
+    overflow: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  /* css code voor tablets in portrait mode */
+  header {
+    .acties {
+      margin-left: 85%;
+    }
+  }
+  .yellow-canvas {
+    max-width: 90%;
+    .mention {
+      margin-top: 0px;
+      .arrow-right {
+        display: none;
+      }
+      .arrow-down {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* css code voor smartphones in landscape mode */
+  header {
+    background: none;
+    .experience {
+      @include scale(0.8);
+      margin-left: 0px;
+    }
+    .acties {
+      margin-left: 80%;
+    }
+    .site-name {
+      padding: 18px 0 18px 125px;
+      font-size: $fontsize-basic +16;
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  /* css code voor smartphones in portrait mode */
+
+  h1 {
+    font-size: $fontsize-basic +15;
+  }
+
+  h2 {
+    font-size: $fontsize-basic +11;
+  }
+
+  h3 {
+    font-size: $fontsize-basic +7;
+  }
+
+  h4 {
+    font-size: $fontsize-basic +3;
+  }
+
+  header {
+    min-height: 200px;
+    .experience {
+      @include scale(0.6);
+      margin-left: -30px;
+    }
+    .experience.stick {
+      position: fixed;
+      @include scale(0);
+    }
+    .site-name {
+      font-size: $fontsize-basic +8;
+      margin-top: 80px;
+      padding: 18px 0 18px 100px;
+      margin-left: 10%;
+    }
+    //als test uitgeschakeld
+    .actie-wrap {
+      display: none;
+    }
+  }
+
+  .green-canvas {
+    max-width: 90%;
+  }
+  .yellow-canvas {
+    .form {
+      input[type="text"] {
+        width: $field_width;
+      }
+      input[type="email"] {
+        width: $field_width;
+      }
+      textarea {
+        width: $field_width;
+      }
+      input[type="submit"] {
+        margin-left: 0;
+      }
+      .form-textarea-wrapper {
+        float: none;
+        padding: 0px;
+        margin: 0 0 15px;
+        width: 100%;
+      }
+    }
+  }
+
+  .image-wrap {
+    display: none;
+  }
+
+  .center {
+    .main-wrap {
+      margin-top: 25px;
+    }
+  }
+
+  .grid {
+    .grid-item, .grid-item--width2 {
+      width: 100%;
+    }
+  }
+
+  footer {
+    .phone-mobile {
+      display: block;
+    }
+    .phone-screen {
+      display: none;
+    }
+  }
+}
+
+// aanpassingen adminimal/beheerthema
+// dit om de admin toolbar onder de nav-bar te tonen
+// dit enkel voor de administrator
+#toolbar {
+  margin: 50px -20px;
+}
+
+
+

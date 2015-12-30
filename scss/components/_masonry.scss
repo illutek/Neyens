@@ -1,0 +1,29 @@
+/*
+* Masonry js deze is uitgeschakeld heeft helemaal
+* geen nut op deze site en gaf ook problemen
+* foto's werden some over elkaar getoond.
+=========================================*/
+.realisaties {
+  h2.title_realizations {
+    margin-bottom: 30px;
+  }
+  .green-canvas {
+    overflow: hidden;
+  }
+}
+
+.grid {
+  overflow: hidden;
+  .grid-item {
+    width: 195px;
+    float: left;
+    margin-right: 0px;
+  }
+  .grid-item--width2 {
+    width: 390px;
+    padding-bottom: 7px;
+  }
+  .img-over-effect:hover {
+    @include opacity-decimal(0.8);
+  }
+}

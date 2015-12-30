@@ -1,0 +1,49 @@
+// =======================================================================
+// ## ++ Header region
+//========================================================================
+
+header {
+  min-height: 300px;
+  background: url("../images/palm-leaves-250-min.png") no-repeat right 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .experience {
+    position: absolute;
+    margin-top: 20px;
+    //height: 250px;
+    //width: 250px;
+    float: left;
+    z-index: 200;
+    @include scale(1);
+    transition: all 0.4s ease-in-out;
+  }
+  .experience.stick {
+    position: fixed;
+    @include scale(0.7);
+    transition: all 0.4s ease-in-out;
+    top: 10px;
+  }
+  .site-name {
+    position: absolute;
+    width: 90%;
+    font-size: $fontsize-basic +20;
+    margin-top: 80px;
+    color: white;
+    padding: 18px 0 18px 100px;
+    margin-left: 10%;
+    background: $yellow;
+    z-index: -100;
+  }
+  .acties {
+    position: absolute;
+    margin-left: 90%;
+    top: 80px;
+    height: 87px;
+    width: 87px;
+    background: url("../images/Infobox_info_icon.svg-min.png") no-repeat center;
+    &:hover {
+      background: url("../images/Infobox_info_icon.svg-hover-min.png") no-repeat center;
+    }
+  }
+}
