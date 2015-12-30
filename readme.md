@@ -190,5 +190,13 @@ function neyensbootstrap_preprocess_html(&$variables)
 }
 ```
 
+###Better login mudule
+Een kleine aanpassing in de files templates/page--user--login.tpl.php, templates/page--user--password.tpl.php
+en templates/page--user--reset.tpl.php
+nl volgende verwijdert <img src="<?php print $logo; ?>" alt="...."> dit om de border rond de site-name
+te verwijderen.
+
+### SCSS opgedeeld
+In verschillende files
 
 
