@@ -1,39 +1,42 @@
-@import "reset";
-@import "basicfonts";
-@import "transform";
-@import "roundcorners";
-@import "opacity";
+//============================================
+// ## ++ mixin
+//=============================================
+@import "mixin/transform";
+@import "mixin/roundcorners";
+@import "mixin/opacity";
+@import "mixin/basicfonts";
 
-//variabeles
+//===========================================
+// ## ++ variabeles
+//==============================================
 @import "variables";
 
-@import "globals";
+//===========================================
+// ## ++ Base
+//===========================================
+@import "base/reset";
+@import "base/globals";
 
-@import "video_background";
+//===========================================
+// ## ++ Lay-out
+//==============================================
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/lay-out";
+@import "layout/contact_form";
+@import "layout/acties";
+@import "layout/footer";
 
-@import "navigation";
+//======================================
+// ## ++ Components
+//======================================
+@import "components/video_background";
+@import "components/masonry";
+@import "components/to-top";
+@import "components/profile";
+@import "components/better-login";
 
-@import "header";
-
-@import "lay-out";
-
-@import "contact_form";
-
-@import "acties";
-
-@import "footer";
-
-//Masonry
-@import "masonry";
-
-//To top
-@import "to-top";
-
-//Profile page
-@import "profile";
-
-//Better login page
-@import "better-login";
-
-// media query's
-@import "media-querys";
+//======================================
+// ## ++ State
+//======================================
+@import "state/media-querys";
