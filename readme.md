@@ -222,7 +222,8 @@ Lijkt misschien ver gezocht om bij een eenvoudige site dit alles toe te passen, 
 heel simpel om bepaalde onderdelen te hergebruiken voor andere projecten.
 
 ##Mixin
-Eigen mixin opgezet om hier bv de submit buttons te layouten.
+Eigen mixin opgezet om hier bv de submit buttons te layouten. (_own-mixin.scss)  
+_basicfonts.scss zit hier in de directory mixin niet echt op zijn plaats, zijn eerder variabele (fonts)
 ```
 @mixin button($bcg: $yellow, $color: $darkgreen, $br: none, $pa: 5px 15px, $hover: $green){
   color: $color;
@@ -234,6 +235,7 @@ Eigen mixin opgezet om hier bv de submit buttons te layouten.
   }
 }
 ```
+
 ![SASS logo](/images/sass.png)  
 
 
