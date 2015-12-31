@@ -54,13 +54,7 @@ body {
         @extend input[type="text"];
       }
       input[type="submit"] {
-        background: $yellow;
-        color: $darkgreen;
-        border: none;
-        padding: 5px 15px;
-        &:hover {
-          color: $green;
-        }
+        @include button();
       }
     }
   }

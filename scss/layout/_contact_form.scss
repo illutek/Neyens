@@ -64,15 +64,9 @@
       width: 100%;
     }
     input[type="submit"] {
-      background: $yellow;
-      color: $darkgreen;
-      border: none;
-      padding: 5px 15px;
+      @include button();
       float: right;
       clear: both;
-      &:hover {
-        color: $green;
-      }
     }
     .resizable-textarea .grippie {
       display: none;

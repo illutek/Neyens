@@ -1,0 +1,11 @@
+//Voor de submit button
+//Use @include button(); - dit voor de default waarden
+@mixin button($bcg: $yellow, $color: $darkgreen, $br: none, $pa: 5px 15px, $hover: $green){
+  color: $color;
+  background: $bcg;
+  border: $br;
+  padding: $pa;
+  &:hover {
+    color: $hover;
+  }
+}

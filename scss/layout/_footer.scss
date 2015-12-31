@@ -32,15 +32,8 @@ footer {
       width: 100%;
     }
     .btn-info {
-      background: $yellow;
-      @include roundcorners(0px);
-      border: none;
-      color: $green;
+      @include button();
       padding: 10px;
-      &:hover {
-        color: #ffffff;
-        background: $yellow;
-      }
     }
   }
 }

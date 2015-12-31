@@ -11,8 +11,6 @@ header {
   .experience {
     position: absolute;
     margin-top: 20px;
-    //height: 250px;
-    //width: 250px;
     float: left;
     z-index: 200;
     @include scale(1);
