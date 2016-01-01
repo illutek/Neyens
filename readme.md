@@ -259,7 +259,7 @@ input[type="submit"] {
 
 In het geval van de button mixin is het beter om een placeholder te gebruiken, nu wordt de code van de button
 elke keer op de style.css file herhaald, zie volgende artikel hierover 
-http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html
+http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html  
 Deze placeholder op de _variables.scss bijvoorbeeld  
 ```
 %button {
