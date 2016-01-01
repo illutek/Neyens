@@ -15,6 +15,14 @@
   -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px; }
 
+.yellow-canvas .form input[type="submit"], #auth_box #middle_part form input[type="submit"] {
+  color: #33571B;
+  background: #f1db00;
+  border: none;
+  padding: 5px 15px; }
+  .yellow-canvas .form input[type="submit"]:hover, #auth_box #middle_part form input[type="submit"]:hover {
+    color: #61a534; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -226,14 +234,8 @@ header {
     .yellow-canvas .form textarea {
       width: 100%; }
     .yellow-canvas .form input[type="submit"] {
-      background: #f1db00;
-      color: #33571B;
-      border: none;
-      padding: 5px 15px;
       float: right;
       clear: both; }
-      .yellow-canvas .form input[type="submit"]:hover {
-        color: #61a534; }
     .yellow-canvas .form .resizable-textarea .grippie {
       display: none; }
 
@@ -263,16 +265,13 @@ footer .phone-mobile {
   footer .phone-mobile .btn {
     width: 100%; }
   footer .phone-mobile .btn-info {
+    color: #33571B;
     background: #f1db00;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
     border: none;
-    color: #61a534;
+    padding: 5px 15px;
     padding: 10px; }
     footer .phone-mobile .btn-info:hover {
-      color: #ffffff;
-      background: #f1db00; }
+      color: #61a534; }
 
 .fullscreen-bg {
   position: fixed;
@@ -352,7 +351,7 @@ footer .phone-mobile {
     /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
     opacity: .5; }
   .no-touch .cd-top:hover {
-    background-color: #e86256;
+    background-color: #33571B;
     opacity: 1; }
 
 .profile ul.user_linken {
@@ -361,7 +360,7 @@ footer .phone-mobile {
 ul.primary {
   min-height: 30px; }
   ul.primary li.active a {
-    background-color: green;
+    background-color: #61a534;
     padding: 9px; }
     ul.primary li.active a:hover {
       background-color: black;
@@ -402,18 +401,19 @@ body.page-user-login, body.page-user-password {
     #auth_box #middle_part form input[type="text"], #auth_box #middle_part form input[type="password"] {
       border: solid 1px #61a534;
       border-radius: 0px; }
-    #auth_box #middle_part form input[type="submit"] {
-      background: #f1db00;
-      color: #33571B;
-      border: none;
-      padding: 5px 15px; }
-      #auth_box #middle_part form input[type="submit"]:hover {
-        color: #61a534; }
   #auth_box #bottom_part {
     padding: 25px;
     border-top: solid 1px #f1db00; }
     #auth_box #bottom_part .password_link a, #auth_box #bottom_part .back_link a {
       color: #f1db00; }
+
+.yellow-canvas .form input[type="submit"], #auth_box #middle_part form input[type="submit"] {
+  color: #33571B;
+  background: #f1db00;
+  border: none;
+  padding: 5px 15px; }
+  .yellow-canvas .form input[type="submit"]:hover, #auth_box #middle_part form input[type="submit"]:hover {
+    color: #61a534; }
 
 @media only screen and (max-width: 1366px) {
   /* css code voor tablets in landscape mode

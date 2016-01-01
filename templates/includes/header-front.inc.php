@@ -9,6 +9,8 @@
 
 <header class="container">
     <div class="row">
+        <!-- de ervaring cirkel er wordt hier een class 'stick' toegevoegd met sticky.js -->
+        <!-- als deze de top vd page bereikt wordt .experience .sticky -->
         <div class="experience">
             <a href="#home">
                 <figure>
@@ -17,7 +19,7 @@
             </a>
         </div>
         <div id="sticky-anchor"></div>
-        <!-- als deze de top vd page bereikt wordt .experience sticky -->
+
         <div class="site-name">
             <?php print $site_name; ?>
         </div>

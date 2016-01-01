@@ -1,5 +1,5 @@
 //==========================================
-// ## ++ variabeles
+// ## ++ Variabeles
 //============================================
 $yellow: #f1db00;
 $green: #61a534;
@@ -7,3 +7,16 @@ $darkgreen: #33571B;
 $grey: #eaeadf;
 $margin-b: 10px;
 $field_width: 100%;
+
+//=============================
+// ## ++ Placeholders
+//=============================
+%button {
+  color: $darkgreen;
+  background: $yellow;
+  border: none;
+  padding: 5px 15px;
+  &:hover {
+    color: $green;
+  }
+}

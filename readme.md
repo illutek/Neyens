@@ -1,7 +1,10 @@
-#Theme opgezet met bootstrap en Flexbox en scss
+#Theme opgezet met Bootstrap framework  
 
+##Video als background  
 Video handleiding in de Drupal map
-http://www.zamzar.com/ voor het converteren naar verschillende formaten
+http://www.zamzar.com/ voor het converteren naar verschillende formaten  
+Een interessant artikel op https://css-tricks.com/should-i-use-a-video-as-a-background/ over
+het gebruik van video als achtergrond.
 
 ##HTML5
 ```html
@@ -49,8 +52,11 @@ De artikel tekst en de h2 moeten samen gebundelt worden in een span tag bij IE z
 anders een probleem geven
 
 
-##Font awesome
-```html
+##Font Awesome  
+
+https://fortawesome.github.io/Font-Awesome/ 
+In het navigatie onderdeel vooral.  
+```
 bedrijven <i class="fa fa-industry"></i>
 gemeente <i class="fa fa-tree"></i> of <i class="fa fa-university"></i>
 realisaties <i class="fa fa-picture-o"></i>
@@ -59,7 +65,11 @@ acties <i class="fa fa-asterisk"></i> of <i class="fa fa-info"></i>
 prive <i class="fa fa-map-pin"></i> of <i class="fa fa-leaf"></i>
 contact <i class="fa fa-envelope"></i>
 ```
-Experience cirkel Sticky after scroll (sticky.js) + aantal transform effecten
+
+##Ervaring cirkel  
+Bij het omlaag scrollen wordt er een extra class toegevoegd 'stick' via het .js bestand  
+Experience cirkel Sticky after scroll (sticky.js) + aantal transform effecten  
+templates/includes/header.inc.php
 
 ##Drupal online
 inhoudstype article enkel gebruikt als hoofd/welkom tekst op de homepage (node--article.tpl.php)
@@ -224,6 +234,8 @@ heel simpel om bepaalde onderdelen te hergebruiken voor andere projecten.
 ##Mixin
 Eigen mixin opgezet om hier bv de submit buttons te layouten. (_own-mixin.scss)  
 _basicfonts.scss zit hier in de directory mixin niet echt op zijn plaats, zijn eerder variabele (fonts)
+
+Hieronder de button mixin
 ```
 @mixin button($bcg: $yellow, $color: $darkgreen, $br: none, $pa: 5px 15px, $hover: $green){
   color: $color;
@@ -234,6 +246,39 @@ _basicfonts.scss zit hier in de directory mixin niet echt op zijn plaats, zijn e
     color: $hover;
   }
 }
+```
+Op bv _contact_form.scss  
+```
+input[type="submit"] {
+      @include button();
+      float: right;
+      clear: both;
+    }
+```
+    
+
+In het geval van de button mixin is het beter om een placeholder te gebruiken, nu wordt de code van de button
+elke keer op de style.css file herhaald, zie volgende artikel hierover 
+http://roytomeij.com/blog/2013/should-you-use-a-sass-mixin-or-extend.html
+Deze placeholder op de _variables.scss bijvoorbeeld  
+```
+%button {
+  color: $color;
+  background: $bcg;
+  border: $br;
+  padding: $pa;
+  &:hover {
+    color: $hover;
+  }
+}
+```
+Nu op bv '_contact_form.scss'  
+```
+input[type="submit"] {
+      @extend %button;
+      float: right;
+      clear: both;
+    }
 ```
 
 ![SASS logo](/images/sass.png)  

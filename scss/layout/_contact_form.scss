@@ -64,7 +64,7 @@
       width: 100%;
     }
     input[type="submit"] {
-      @include button();
+      @extend %button;
       float: right;
       clear: both;
     }

@@ -54,7 +54,7 @@ body {
         @extend input[type="text"];
       }
       input[type="submit"] {
-        @include button();
+        @extend %button;
       }
     }
   }
