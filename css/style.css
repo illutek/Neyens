@@ -3,16 +3,12 @@
 @import url(http://fonts.googleapis.com/css?family=Boogaloo);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 .rounded {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px; }
 
 .roundedTop {
   -moz-border-top-left-radius: 5px;
-  -webkit-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
   -moz-border-top-right-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px; }
 
 .yellow-canvas .form input[type="submit"], #auth_box #middle_part form input[type="submit"] {
@@ -20,7 +16,7 @@
   background: #f1db00;
   border: none;
   padding: 5px 15px; }
-  .yellow-canvas .form input[type="submit"]:hover, #auth_box #middle_part form input[type="submit"]:hover {
+  .yellow-canvas .form input:hover[type="submit"], #auth_box #middle_part form input:hover[type="submit"] {
     color: #61a534; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -116,7 +112,12 @@ a {
 header {
   min-height: 300px;
   background: url("../images/palm-leaves-250-min.png") no-repeat right 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative; }
   header .experience {
@@ -124,19 +125,15 @@ header {
     margin-top: 20px;
     float: left;
     z-index: 200;
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
   header .experience.stick {
     position: fixed;
-    -moz-transform: scale(0.7);
-    -o-transform: scale(0.7);
-    -ms-transform: scale(0.7);
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
+    -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     top: 10px; }
   header .site-name {
@@ -218,11 +215,13 @@ header {
     padding: 25px;
     overflow: hidden; }
     .yellow-canvas .form .webform-component {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex; }
     .yellow-canvas .form label {
       min-width: 25%;
       line-height: 40px; }
-    .yellow-canvas .form input[type='text'], .yellow-canvas .form input[type='email'], .yellow-canvas .form .form-textarea-wrapper, .yellow-canvas .form textarea {
+    .yellow-canvas .form input[type='text'], .yellow-canvas .form input[type='email'], .yellow-canvas .form .form-textarea-wrapper, .yellow-canvas .form textarea, .yellow-canvas .form #auth_box #middle_part form input[type='text'][type="password"], #auth_box #middle_part form .yellow-canvas .form input[type='text'][type="password"] {
       width: 75%;
       float: right;
       clear: both;
@@ -259,6 +258,7 @@ footer .footer-wrap {
   footer .footer-wrap .footer-right a {
     text-decoration: none;
     color: #ffffff; }
+
 footer .phone-mobile {
   display: none;
   margin: 15px 0; }
@@ -292,10 +292,12 @@ footer .phone-mobile {
   .fullscreen-bg__video {
     height: 300%;
     top: -100%; } }
+
 @media (max-aspect-ratio: 16 / 9) {
   .fullscreen-bg__video {
     width: 300%;
     left: -100%; } }
+
 /*
 * Masonry js deze is uitgeschakeld heeft helemaal
 * geen nut op deze site en gaf ook problemen
@@ -303,6 +305,7 @@ footer .phone-mobile {
 =========================================*/
 .realisaties h2.title_realizations {
   margin-bottom: 30px; }
+
 .realisaties .green-canvas {
   overflow: hidden; }
 
@@ -328,6 +331,7 @@ footer .phone-mobile {
   position: fixed;
   bottom: 40px;
   right: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   /* image replacement properties */
   overflow: hidden;
@@ -337,11 +341,9 @@ footer .phone-mobile {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s; }
   .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
     -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-    -moz-transition: opacity .3s 0s, visibility 0s 0s;
     transition: opacity .3s 0s, visibility 0s 0s; }
   .cd-top.cd-is-visible {
     /* the button becomes visible */
@@ -392,13 +394,14 @@ body.page-user-login, body.page-user-password {
   #auth_box #middle_part {
     background: #61a534;
     padding: 25px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 310px;
     margin: auto; }
     #auth_box #middle_part form label {
       width: 150px;
       color: #ffffff; }
-    #auth_box #middle_part form input[type="text"], #auth_box #middle_part form input[type="password"] {
+    #auth_box #middle_part form input[type="text"], #auth_box #middle_part form .yellow-canvas .form .form-textarea-wrapper[type="text"], .yellow-canvas .form #auth_box #middle_part form .form-textarea-wrapper[type="text"], #auth_box #middle_part form .yellow-canvas .form textarea[type="text"], .yellow-canvas .form #auth_box #middle_part form textarea[type="text"], #auth_box #middle_part form input[type="password"] {
       border: solid 1px #61a534;
       border-radius: 0px; }
   #auth_box #bottom_part {
@@ -412,7 +415,7 @@ body.page-user-login, body.page-user-password {
   background: #f1db00;
   border: none;
   padding: 5px 15px; }
-  .yellow-canvas .form input[type="submit"]:hover, #auth_box #middle_part form input[type="submit"]:hover {
+  .yellow-canvas .form input:hover[type="submit"], #auth_box #middle_part form input:hover[type="submit"] {
     color: #61a534; }
 
 @media only screen and (max-width: 1366px) {
@@ -420,49 +423,41 @@ body.page-user-login, body.page-user-password {
   De 1366px op aanraden van Koen (was 1024)*/
   .green-canvas {
     max-width: 90%; }
-
   .yellow-canvas {
     max-width: 90%; } }
+
 @media (max-width: 991px) {
   .navbar-header {
     float: none; }
-
   .navbar-toggle {
     display: block; }
-
   .navbar-collapse {
     border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-
   .navbar-collapse.collapse {
     display: none !important; }
-
   .navbar-nav, .navbar-default .navbar-right {
     float: none !important;
     margin: 7.5px -15px; }
-
   .navbar-nav > li, .navbar-default .navbar-right > li {
     float: none; }
-
   .navbar-nav > li > a, .navbar-default .navbar-right > li > a {
     padding-top: 10px;
     padding-bottom: 10px; }
-
   .navbar-text {
     float: none;
     margin: 15px 0; }
-
   /* bij versie 3.1.0 */
   .navbar-collapse.collapse.in {
     display: block !important; }
-
   .collapsing {
     overflow: hidden !important; } }
+
 @media only screen and (max-width: 960px) {
   /* css code voor tablets in portrait mode */
   header .acties {
     margin-left: 85%; }
-
   .yellow-canvas {
     max-width: 90%; }
     .yellow-canvas .mention {
@@ -471,14 +466,12 @@ body.page-user-login, body.page-user-password {
         display: none; }
       .yellow-canvas .mention .arrow-down {
         display: block; } }
+
 @media only screen and (max-width: 767px) {
   /* css code voor smartphones in landscape mode */
   header {
     background: none; }
     header .experience {
-      -moz-transform: scale(0.8);
-      -o-transform: scale(0.8);
-      -ms-transform: scale(0.8);
       -webkit-transform: scale(0.8);
       transform: scale(0.8);
       margin-left: 0px; }
@@ -487,34 +480,25 @@ body.page-user-login, body.page-user-password {
     header .site-name {
       padding: 18px 0 18px 125px;
       font-size: 28px; } }
+
 @media only screen and (max-width: 479px) {
   /* css code voor smartphones in portrait mode */
   h1 {
     font-size: 27px; }
-
   h2 {
     font-size: 23px; }
-
   h3 {
     font-size: 19px; }
-
   h4 {
     font-size: 15px; }
-
   header {
     min-height: 200px; }
     header .experience {
-      -moz-transform: scale(0.6);
-      -o-transform: scale(0.6);
-      -ms-transform: scale(0.6);
       -webkit-transform: scale(0.6);
       transform: scale(0.6);
       margin-left: -30px; }
     header .experience.stick {
       position: fixed;
-      -moz-transform: scale(0);
-      -o-transform: scale(0);
-      -ms-transform: scale(0);
       -webkit-transform: scale(0);
       transform: scale(0); }
     header .site-name {
@@ -524,11 +508,9 @@ body.page-user-login, body.page-user-password {
       margin-left: 10%; }
     header .actie-wrap {
       display: none; }
-
   .green-canvas {
     max-width: 90%; }
-
-  .yellow-canvas .form input[type="text"], .yellow-canvas .form #auth_box #middle_part form input[type="password"], #auth_box #middle_part form .yellow-canvas .form input[type="password"] {
+  .yellow-canvas .form input[type='text'], .yellow-canvas .form input[type='email'], .yellow-canvas .form .form-textarea-wrapper, .yellow-canvas .form textarea, .yellow-canvas .form #auth_box #middle_part form input[type='text'][type="password"], #auth_box #middle_part form .yellow-canvas .form input[type='text'][type="password"] {
     width: 100%; }
   .yellow-canvas .form input[type="email"] {
     width: 100%; }
@@ -541,20 +523,17 @@ body.page-user-login, body.page-user-password {
     padding: 0px;
     margin: 0 0 15px;
     width: 100%; }
-
   .image-wrap {
     display: none; }
-
   .center .main-wrap, .center .main-wrap-top {
     margin-top: 25px; }
-
   .grid .grid-item, .grid .grid-item--width2 {
     width: 100%; }
-
   footer .phone-mobile {
     display: block; }
   footer .phone-screen {
     display: none; } }
+
 #toolbar {
   margin: 50px -20px; }
 
