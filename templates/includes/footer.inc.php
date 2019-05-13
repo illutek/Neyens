@@ -43,7 +43,7 @@
 
             <div class="col-sm-6 footer-right">
                 <img src="<?php print $images_path; ?>logo_small.jpg" alt="Neyens oud logo">
-                <?php print '<a href="' . url('user') . '">' . 'Neyens | &copy; 2015' . '</a>'; ?>
+                <?php print '<a href="' . url('user') . '">' . 'Neyens | &copy; ' . date(Y) . '</a>'; ?>
             </div>
         </div>
     </div>

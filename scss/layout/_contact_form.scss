@@ -63,13 +63,24 @@
       @extend input[type='text'];
       width: 100%;
     }
-    input[type="submit"] {
-      @extend %button;
-      float: right;
-      clear: both;
-    }
+    
     .resizable-textarea .grippie {
       display: none;
     }
   }
+}
+
+.submitted {
+  display: none;
+}
+
+input[type="submit"] {
+  @extend %button;
+  float: right;
+  clear: both;
+}
+
+input[type='text'], input[type='email'], textarea {
+  padding: 5px;
+  color: $green;
 }
