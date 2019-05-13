@@ -1,12 +1,12 @@
-#Theme opgezet met Bootstrap framework  
+# Theme opgezet met Bootstrap framework  
 
-##Video als background  
+## Video als background  
 Video handleiding in de Drupal map
 http://www.zamzar.com/ voor het converteren naar verschillende formaten  
 Een interessant artikel op https://css-tricks.com/should-i-use-a-video-as-a-background/ over
 het gebruik van video als achtergrond.
 
-##HTML5
+## HTML5
 ```html
 <section class="center" id="prive-tuinen">
     <div class="main-wrap">
@@ -52,7 +52,7 @@ De artikel tekst en de h2 moeten samen gebundelt worden in een span tag bij IE z
 anders een probleem geven
 
 
-##Font Awesome  
+## Font Awesome  
 
 https://fortawesome.github.io/Font-Awesome/ 
 In het navigatie onderdeel vooral.  
@@ -66,12 +66,12 @@ prive <i class="fa fa-map-pin"></i> of <i class="fa fa-leaf"></i>
 contact <i class="fa fa-envelope"></i>
 ```
 
-##Ervaring cirkel  
+## Ervaring cirkel  
 Bij het omlaag scrollen wordt er een extra class toegevoegd 'stick' via het .js bestand  
 Experience cirkel Sticky after scroll (sticky.js) + aantal transform effecten  
 templates/includes/header.inc.php
 
-##Drupal online
+## Drupal online
 inhoudstype article enkel gebruikt als hoofd/welkom tekst op de homepage (node--article.tpl.php)
 
 page--front.tpl.php en page.tpl.php voor structuur
@@ -79,7 +79,7 @@ De indentieke delen op de page en front--page vervangen door inc.php onderdelen
 - footer.inc.php - header.inc.php - fullscreen_bg.inc.php (de video background)
 ```<?php include 'footer.inc.php'; ?> ```
 
-##Path naar images en video
+## Path naar images en video
 
 Maakt het leesbaarder op tpl.php niveau
 ```
@@ -96,7 +96,7 @@ function neyensbootstrap_preprocess_page(&$vars) {
 <img src="<?php print $images_path; ?>/twentyfive_year_active-stroke-200-min.png">
 ```
 
-##Masonry
+## Masonry
 ### Realisaties (uitgeschakeld afbeeldingen liggen soms over elkaar zonder enige verklaring)
 #### Had hier ook weinig zin omdat de thumbnails alle dezelfde hoogte hebben.
 Dit zonder modules, een inhoudstype realisaties, een simpele view volledige inhoud tonen.
@@ -115,7 +115,7 @@ for ($i = 1; $i < $total; ++$i): ?>
 <?php endfor; ?>
 ```
 
-##Aanroepen jquery.smooth-scroll.js
+## Aanroepen jquery.smooth-scroll.js
 Om dit enkel op de home pagina te include.
 ```
     if (drupal_is_front_page()) {
@@ -127,12 +127,12 @@ Volgende om ervoor te zorgen dat dit gebeurt na het include van jquery.min.js ge
 array('weight' => 2)
 ```
 
-##Collapse menu
+## Collapse menu
 Het menu op de page--front.tpl.php in tablet mode klapt niet dicht na een menu keuze
 omdat het menu item naar een ankerpunt refereerd op dezelfde pagina, collapse.js lost dit op, wordt eveneens
 enkel op de frontpage opgeroepen via drupal_add_js op template.php.
 
-##Vieuwport
+## Vieuwport
 Ingesteld op template.php, op deze manier blijft html.php weer een stuk cleaner.
 ```
 /**
@@ -151,7 +151,7 @@ function neyensbootstrap_page_alter($page) {
 }
 ```
 
-##Custom js files
+## Custom js files
 JavaScript closures toegevoegd 'jQuery(document).ready'
 ```
 function($) {
@@ -164,10 +164,10 @@ jQuery(document).ready(function($) {
 ```
 https://www.drupal.org/node/171213
 
-###Alle bootstrap files extern (versie 3.3.6)
+### Alle bootstrap files extern (versie 3.3.6)
 De versie 3.3.4 op domein laten zitten om eventueel terug te kunnen vallen (.info file uit comment halen)
 
-##Meta tags
+## Meta tags
 Deze toegevoegd op template.php heeft weinig zin op de module te installeren voor enkel 1 pagina, de front page
 
 ```
@@ -200,13 +200,13 @@ function neyensbootstrap_preprocess_html(&$variables)
 }
 ```
 
-##Better login module
+## Better login module
 Een kleine aanpassing in de files templates/page--user--login.tpl.php, templates/page--user--password.tpl.php
 en templates/page--user--reset.tpl.php
 nl volgende verwijdert ```<img src="<?php print $logo; ?>" alt="....">``` dit om de border rond de site-name
 te verwijderen.
 
-##SCSS opgedeeld  
+## SCSS opgedeeld  
 ![SMACSS logo](/images/SMACSS.jpg)  
 In verschillende files SMACSS Scalable and Modular Architecture for CSS  
 * Base: alle basis css zoals reset en globals (vooral de tags zoals header, body, paragraaf, linken  
@@ -231,7 +231,7 @@ https://smacss.com/
 Lijkt misschien ver gezocht om bij een eenvoudige site dit alles toe te passen, maar toch op deze mannier is het 
 heel simpel om bepaalde onderdelen te hergebruiken voor andere projecten.
 
-##Mixin
+## Mixin
 Eigen mixin opgezet om hier bv de submit buttons te layouten. (_own-mixin.scss)  
 _basicfonts.scss zit hier in de directory mixin niet echt op zijn plaats, zijn eerder variabele (fonts)
 
@@ -282,7 +282,3 @@ input[type="submit"] {
 ```
 
 ![SASS logo](/images/sass.png)  
-
-
-
-
